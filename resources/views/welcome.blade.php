@@ -4,7 +4,7 @@
         <!-- Navigation-->
         <x-navbar />
         <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
+        <header class="masthead header-color-personal text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
@@ -103,7 +103,7 @@
             </div>
         </section>
         <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
+        <section class="page-section header-color-personal text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
