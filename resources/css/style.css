@@ -1,0 +1,186 @@
+/* css dashboard */
+.nav-link-custom:hover,
+.i-link-custom:hover {
+    color: grey !important;
+}
+
+.nav-link-custom:hover {
+    text-decoration: underline !important;
+}
+
+td,
+th {
+    width: 25px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* css navbar */
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: RGBA(var(--bs-secondary-rgb), var(--bs-link-opacity, 1)) !important;
+    color: white !important;
+}
+
+.link-underline-dark {
+    text-decoration: underline;
+}
+
+.fa-arrow-right-from-bracket:hover {
+    color: white;
+}
+
+.disabled {
+    color: white !important;
+}
+
+.auth-link:hover {
+    border-bottom: 0.5px solid black;
+}
+
+/* css section */
+.card-custom {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-position 0.3s;
+}
+
+.card-custom:hover {
+    background-position: right 50%;
+}
+
+.card-custom-1 {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.border-custom {
+    border: 0;
+    border-radius: 0;
+    background-color: #F0F0F0
+}
+
+.border-custom:hover {
+    border: 0;
+    border-radius: 0;
+    background-color: black;
+    color: white !important;
+}
+
+/* css book.show */
+.trans-scale {
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+.trans-scale:hover {
+    transform: scale(1.1);
+}
+
+/* css books.index */
+.hero-section {
+    padding: 300px 0 250px;
+}
+
+.overlay {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.custom-bg-btn {
+    opacity: 1 !important;
+}
+
+/* mediaquery */
+@media screen and (min-width: 992px) {
+
+    /* css header */
+    header {
+        background-image: url('/public/Leggere-libri-velocemente.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-attachment: fixed;
+        height: 100vh;
+        padding-top: 10%;
+        margin-top: 0 !important;
+    }
+
+    /* css section */
+    .bg-img {
+        background-image: url('/public/vend1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        padding: 15% 25%;
+    }
+
+    /* css form create/edit */
+    .row-custom {
+        width: 50%;
+    }
+
+    /* css dashboard */
+    .btn-edit {
+        display: block !important;
+    }
+
+    .icon-edit {
+        display: none !important;
+    }
+
+    .height-profile {
+        min-height: 75vh;
+    }
+
+    .link-dash:hover {
+        background-color: #6c757d;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+
+    /* css books.index */
+    .row-index {
+        justify-content: start !important;
+    }
+
+    .img-card-index {
+        width: 23rem;
+        height: 15rem;
+    }
+
+    /* css show */
+    .margin-show {
+        margin-top: 5% !important;
+    }
+
+    .div-show-book {
+        width: 25rem;
+        height: 35rem;
+    }
+
+    .div-show-random {
+        justify-content: center !important;
+    }
+
+    .card-img-show {
+        width: 16.87rem;
+        height: 10rem;
+    }
+}

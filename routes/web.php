@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('homepage');
+
+Route::get('/dashboard', function () {
+    return view('dashboards.dashboard');
 });
 
 Route::resource('announcements', AnnouncementController::class);
