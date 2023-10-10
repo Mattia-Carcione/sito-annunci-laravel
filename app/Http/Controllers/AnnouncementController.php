@@ -21,16 +21,16 @@ class AnnouncementController extends Controller
      */
     public function create()
     {
-        //
+        return view('announcements.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAnnouncementRequest $request)
-    {
-        //
-    }
+    // public function store(StoreAnnouncementRequest $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.
@@ -51,16 +51,16 @@ class AnnouncementController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAnnouncementRequest $request, Announcement $announcement)
-    {
-        //
-    }
+    // public function update(UpdateAnnouncementRequest $request, Announcement $announcement)
+    // {
+    //     //
+    // }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Announcement $announcement)
-    {
-        //
-    }
+    // /**
+    //  * Remove the specified resource from storage.
+    //  */
+    // public function destroy(Announcement $announcement)
+    // {
+    //     //
+    // }
 }

@@ -1,0 +1,1 @@
+<livewire:announcement-create-form />
