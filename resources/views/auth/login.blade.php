@@ -15,12 +15,12 @@
                                     @csrf
                                     @method('POST')
                                     <div class="form-outline form-white mb-4">
-                                        <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                                        <input type="email" name="email" id="typeEmailX" class="form-control form-control-lg" />
                                         <label class="form-label" for="typeEmailX">Email</label>
                                     </div>
 
                                     <div class="form-outline form-white mb-4">
-                                        <input type="password" id="typePasswordX"
+                                        <input type="password" name="password" id="typePasswordX"
                                             class="form-control form-control-lg" />
                                         <label class="form-label" for="typePasswordX">Password</label>
                                     </div>

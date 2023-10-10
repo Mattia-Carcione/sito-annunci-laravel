@@ -40,7 +40,7 @@
                                     </div>
 
                                     <div class="form-outline form-white mb-4">
-                                        <input type="password" name="password_confirmation" id="typePasswordX"
+                                        <input type="password" name="remember" id="typePasswordX"
                                             class="form-control form-control-lg" />
                                         <label class="form-label" for="typePasswordX">Conferma Password</label>
                                     </div>
