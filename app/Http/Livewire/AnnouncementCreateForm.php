@@ -38,6 +38,7 @@ class AnnouncementCreateForm extends Component
         Auth::user()->announcements()->save($announcement);
 
         session()->flash('message', 'Annuncio inserito con successo');
+        $this->clearForm();
     }
     public function render()
     {
@@ -48,6 +49,7 @@ class AnnouncementCreateForm extends Component
         $this->title = '';
         $this->description = '';
         $this->price = '';
+        $this->category = '';
     }
 
     protected function updated($propertyName) {
