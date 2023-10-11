@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FindEasy.com</title>
     @vite(['resources\css\app.css', 'resources\js\app.js'])
-    {{-- @livewireStyles
-    @livewireScripts --}}
+    @livewireStyles
+    
 
 </head>
 
@@ -139,6 +139,7 @@
         </main>
     </div>
 </div>
+@livewireScripts
 </body>
 
 </html>
