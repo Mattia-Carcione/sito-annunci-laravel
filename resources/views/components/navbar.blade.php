@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-color-personal text-uppercase fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand" href="#page-top">FindEasy</a>
         <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
             data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -27,9 +27,11 @@
                     <li class="nav-item mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{route('announcements.create')}}">Inserisci annuncio</a>
+                    </li>
 
-                    <li class="nav-item mx-0 mx-lg-1 dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  role="button" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link " href="#" id="navbar"  role="button" >{{ Auth::user()->name }}</a>
                     </li>
 
                     <li class="nav-item mx-0 mx-lg-1">
@@ -47,3 +49,5 @@
         </div>
     </div>
 </nav>
+
+

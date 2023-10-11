@@ -14,6 +14,15 @@
                                 <form action="{{ route('login') }}" method="POST">
                                     @csrf
                                     @method('POST')
+                                    @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                      <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                      </ul>
+                                    </div>
+                                    @endif
                                     <div class="form-outline form-white mb-4">
                                         <input type="email" name="email" id="typeEmailX" class="form-control form-control-lg" />
                                         <label class="form-label" for="typeEmailX">Email</label>
