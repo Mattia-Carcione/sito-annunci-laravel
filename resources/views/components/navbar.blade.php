@@ -27,6 +27,8 @@
                     <li class="nav-item mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{route('announcements.create')}}">Inserisci annuncio</a>
+                    </li>
 
                     <li class="nav-item mx-0 mx-lg-1 dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  role="button" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
