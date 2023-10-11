@@ -12,6 +12,25 @@
                 <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Home</a>
                 </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{route('announcements.index')}}">Annunci</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1 align-items-center d-flex">
+                    
+                    <div class="dropdown">
+                        <a class=" dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Categorie
+                        </a>
+                      
+                        <ul class="dropdown-menu">
+                            @foreach ( $categories as $category)
+                            <li><a class="dropdown-item" href="{{route('categories.show' ,compact('category'))}}">{{($category->name)}}</a></li>
+                            @endforeach
+                          
+                        </ul>
+                      </div>
+                    
+                </li>
                 @guest
                     <li class="nav-item mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('register') }}">Registrati</a>
