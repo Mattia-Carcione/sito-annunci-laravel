@@ -9,6 +9,6 @@ class RouteController extends Controller
 {
     public function homepage()
     {
-        return view('homepage', ['announcements' => Announcement::take(6)->get()->sortByDesc('created_at')]);
+        return view('welcome', ['announcements' => Announcement::take(6)->get()->sortByDesc('created_at')]);
     }
 }
