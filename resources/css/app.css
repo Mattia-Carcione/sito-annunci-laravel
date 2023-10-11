@@ -1,6 +1,17 @@
 @import 'bootstrap';
 @import 'style.css';
 
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #C5DCDC,  #5478F0);
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #C5DCDC,  #5478F0)
+  }
+
 /* Generals resets and unimportant stuff */
 * { margin: 0px; padding: 0px; }
 body {
