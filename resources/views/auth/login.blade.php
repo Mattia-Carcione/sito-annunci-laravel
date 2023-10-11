@@ -25,6 +25,12 @@
                                         <label class="form-label" for="typePasswordX">Password</label>
                                     </div>
 
+                                    <div class="mb-4 form-check">
+                                        <input type="checkbox" name="remember" id="exampleCheck1"
+                                            class="form-check-input" />
+                                        <label class="form-check-label" for="exampleCheck1">Ricordati di me</label>
+                                    </div>
+
                                     <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot
                                             password?</a></p>
 
