@@ -55,7 +55,7 @@
                             </div>
 
                             <div>
-                                <p class="mb-0">Don't have an account? <a href="#!"
+                                <p class="mb-0">Don't have an account? <a href="{{route('register')}}"
                                         class="text-white-50 fw-bold">Sign Up</a>
                                 </p>
                             </div>
