@@ -184,30 +184,39 @@ th {
         height: 10rem;
     }
 }
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-*
-{
+
+* {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 
-body
-{
+body {
     font-family: 'Roboto', sans-serif;
 }
-a
-{
+
+a {
     text-decoration: none;
 }
+
 .product-card {
     width: 380px;
     position: relative;
     box-shadow: 0 2px 7px #dfdfdf;
     margin: 50px auto;
     background: #fafafa;
+    transition: 1.3s all;
+
+}
+
+.product-card:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    z-index: 1 !important;
 }
 
 .badge {
@@ -260,7 +269,7 @@ a
 }
 
 .product-details h4 a:hover {
-    color: #fbb72c!important;
+    color: #fbb72c !important;
 }
 
 .product-details p {
