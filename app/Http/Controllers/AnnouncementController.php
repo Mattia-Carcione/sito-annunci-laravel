@@ -19,7 +19,7 @@ class AnnouncementController extends Controller
     {
     
 
-        return view('announcements.index' , ['announcement' => Announcement::all()->sortByDesc('created_at')]);
+        return view('announcements.index' , ['announcements' => Announcement::all()->sortByDesc('created_at')]);
 
         //
     }
