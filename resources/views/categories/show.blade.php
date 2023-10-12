@@ -4,8 +4,6 @@
             <div class="row gx-5 justify-content-center">
                 <h2 class="fw-bolder text-center">Esplora la Categoria: {{ $category->name }}</h2>
 
-                <a id="view-code" target="_blank">VIEW CODE</a>
-
                 <div id="make-3D-space">
                     @forelse ($category->announcements as $announcement)
 

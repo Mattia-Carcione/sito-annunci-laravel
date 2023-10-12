@@ -29,7 +29,7 @@ body {
 #view-code:hover{color:#34c29e;}
 
 /* --- Product Card ---- */
-#make-3D-space{
+ #make-3D-space{
     position: relative;
     perspective: 800px;
     width:340px;
@@ -39,7 +39,7 @@ body {
     position:absolute;    
     top:240px;
 
-}
+} 
 #product-front, #product-back{
 	width:335px;
 	height:500px;
