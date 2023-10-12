@@ -15,14 +15,63 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+                <p class="masthead-subheading font-weight-light mb-0">Tutto ciò che ti serve, quando vuoi tu, dove vuoi tu.</p>
             </div>
         </header>
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Annunci</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- annunci -->
+                <div class="container mt-5 pt-5">
+                    
+                    <div class="row">
+                        @forelse ($announcements as $announcement)
+                        <div class="product-card col-12 col-md-4 m-2">
+                            @if ($announcement->created_at->diffInHours(now()) <= 24)
+                                <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
+                            @endif
+            
+                            <div class="product-tumb">
+                                <img src="https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg"
+                                    alt="">
+                            </div>
+                            <div class="product-details">
+                                <span class="product-catagory">{{ $announcement->category->name }}</span>
+                                <h4><a style="color: #5478F0"
+                                        href="{{ route('announcements.show', $announcement) }}">{{ $announcement->title }}</a>
+                                </h4>
+                                <p>
+                                    {{ $announcement->description }}
+                                </p>
+                                <div class="product-bottom-details">
+                                    <div class="product-price">€{{ $announcement->price }}</div>
+                                    <div class="product-links">
+                                        <a href=""><i class="fa fa-heart"></i></a>
+                                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @empty
+                            
+                        @endforelse
+                    </div>
+            
+                </div>
+
+                <!-- Categories Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Categories Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Categorie</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
