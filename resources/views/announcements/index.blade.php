@@ -1,9 +1,9 @@
 <x-layout>
-    <div class="container mt-5 pt-5">
+    <div class="container my-5 py-5 min-vh-100">
         <h1 class="pt-5 text-center">Annunci</h1>
-        <div class="row justify-content-start">
+        <div class="row justify-content-start mb-3">
             @forelse ($announcements as $announcement)
-                <div class="product-card col-12 col-md-3 m-2">
+            <div class="product-card me-2" style="width: 95%;">
                     @if ($announcement->created_at->diffInHours(now()) <= 24)
                         <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                     @endif
@@ -32,8 +32,8 @@
             @empty
                 <p>Non ci sono annunci</p>
             @endforelse
-            {{ $announcements->links() }}
         </div>
+        {{ $announcements->links() }}
 
     </div>
 </x-layout>
