@@ -3,29 +3,35 @@
         <div class="container px-5 my-5">
             <div class="row gx-5 justify-content-center">
                 <h2 class="fw-bolder text-center">Esplora la Categoria: {{ $category->name }}</h2>
-                <a id="view-code" href="https://codepen.io/virgilpana/pen/RNYQwB" target="_blank">VIEW CODE</a>
-                <div id="make-3D-space" class="d-flex justify-content-around">
-                    <div id="product-card" class="row gx-5">
-                        @forelse ($category->announcements as $announcement)
-                            <div id="product-front" class="col-12 col-md-4 mb-5">
 
+                <a id="view-code" target="_blank">VIEW CODE</a>
+
+                <div id="make-3D-space">
+                    @forelse ($category->announcements as $announcement)
+
+                        <div id="product-card">
+                            <div id="product-front">
                                 <div class="shadow"></div>
                                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png"
                                     alt="" />
-                                <div class="image_overlay"></div>
-                                <div id="view_details">View details</div>
+                                <a href="{{ route('announcements.show', compact('announcement')) }}">
+                                    <div id="view_details">View details</div>
+                                </a>
+
                                 <div class="stats">
                                     <div class="stats-container">
-                                        <span class="product_price">{{ $announcement->price }}€</span>
-                                        <span class="product_name">{{ $announcement->title }}</span>
-                                        <span class="product_name">Descrizione: {{ $announcement->description }}</span>
-                                        <p class="card-footer my-5">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Autore: {{$announcement->user->name ?? ''}}</p>
+                                        <span class="product_price">$39</span>
+                                        <span class="product_name">Adidas Originals</span>
+                                        <p>Men's running shirt</p>
+
+
                                     </div>
                                 </div>
                             </div>
 
-                    </div>
+                        </div>
                 </div>
+
             @empty
                 <div>
                     <h2>Non sono presenti Annunci per questa categoria</h2>
