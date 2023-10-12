@@ -14,6 +14,8 @@
                             
                             <a href="{{ route('announcements.index')}}"
                                 class="btn btn-primary">Index</a>
+                                <a href="{{ route('categories.show', ['category'=>$announcement->category])}}"
+                                class="btn btn-primary">Categoria</a>
                         </div>
                     </div>
 </x-layout>
