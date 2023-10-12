@@ -3,15 +3,13 @@
         <h1 class="pt-5 text-center">Annunci</h1>
         <div class="row justify-content-start mb-3">
             @forelse ($announcements as $announcement)
-            <div class="product-card me-2" style="width: 95%;">
+                <div class="product-card me-2" style="width: 95%;">
                     @if ($announcement->created_at->diffInHours(now()) <= 24)
                         <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                     @endif
 
-                    <div class="product-tumb">
-                        <img src="https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg"
-                            alt="">
-                    </div>
+                    <img src="https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg"
+                        alt="" class="img-fluid">
                     <div class="product-details">
                         <span class="product-catagory">{{ $announcement->category->name }}</span>
                         <h4><a style="color: #5478F0"
