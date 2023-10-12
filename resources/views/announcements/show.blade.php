@@ -1,21 +1,34 @@
 <x-layout>
     <div class="container mt-5 pt-5">
         <h1 class="pt-5 text-center">Dettagli</h1>
-        <div class="row">
-                <div class="col-12 col-md-12 my-4 d-flex justify-content-around align-items-center">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://fastly.picsum.photos/id/1037/200/200.jpg?hmac=MMp-F1917NlyyHn_Bd0ZS6iR3v1-FLpGFkxYeQguinM"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $announcement->title }}</h5>
-                            <p class="card-text">{{ $announcement->description }}</p>
-                            <p class="card-text">{{ $announcement->price }}</p>
-                            <p class="card-text">Pubblicazione: {{ $announcement->created_at }}</p>
-                            
-                            <a href="{{ route('announcements.index')}}"
-                                class="btn btn-primary">Index</a>
-                                <a href="{{ route('categories.show', ['category'=>$announcement->category])}}"
-                                class="btn btn-primary">Categoria</a>
+        <div class="row justify-content-center">
+            <section class="product">
+                <div class="product__photo">
+                    <div class="photo-container">
+                        <div class="photo-main">
+                            <div class="controls">
+                                <i class="material-icons">share</i>
+                                <i class="material-icons">favorite_border</i>
+                            </div>
+                            <img src="https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg"
+                                alt="green apple slice">
                         </div>
                     </div>
+                </div>
+                <div class="product__info">
+                    <div class="title">
+                        <h1>{{ $announcement->title }}</h1>
+                    </div>
+                    <div class="price">
+                        € <span>{{ $announcement->price }}</span>
+                    </div>
+
+                    <div class="description">
+                        <h3>DESCRIZIONE</h3>
+                        <P>{{ $announcement->description }}</P>
+                        <button class="buy--btn">ADD TO CART</button>
+                    </div>
+            </section>
+        </div>
+    </div>
 </x-layout>
