@@ -12,8 +12,8 @@
                             <p class="card-text">{{ $announcement->price }}</p>
                             <p class="card-text">Pubblicazione: {{ $announcement->created_at }}</p>
                             
-                            <a href="{{ route('announcements.show', compact('announcement')) }}"
-                                class="btn btn-primary">Dettagli</a>
+                            <a href="{{ route('announcements.index')}}"
+                                class="btn btn-primary">Index</a>
                         </div>
                     </div>
 </x-layout>
