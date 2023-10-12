@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-color-personal text-uppercase fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="{{route('homepage')}}">FindEasy</a>
+        <a class="navbar-brand" href="{{ route('homepage') }}">FindEasy</a>
         <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
             data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -10,26 +10,29 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{route('homepage')}}">Home</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{route('announcements.index')}}">Annunci</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('announcements.index') }}">Annunci</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1 align-items-center d-flex">
-                    
+
                     <div class="dropdown">
-                        <a class=" dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Categorie
+                        <a class=" dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categorie
                         </a>
-                      
+
                         <ul class="dropdown-menu">
-                            @foreach ( $categories as $category)
-                            <li><a class="dropdown-item" href="{{route('categories.show' ,compact('category'))}}">{{($category->name)}}</a></li>
+                            @foreach ($categories as $category)
+                                <li><a class="dropdown-item"
+                                        href="{{ route('categories.show', compact('category')) }}">{{ $category->name }}</a>
+                                </li>
                             @endforeach
-                          
+
                         </ul>
-                      </div>
-                    
+                    </div>
+
                 </li>
                 @guest
                     <li class="nav-item mx-0 mx-lg-1">
@@ -46,17 +49,19 @@
                     <li class="nav-item mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a>
                     </li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{route('announcements.create')}}">Inserisci annuncio</a>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="{{ route('announcements.create') }}">Inserisci annuncio</a>
                     </li>
 
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link " href="#" id="navbar"  role="button" >{{ Auth::user()->name }}</a>
+                    <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
+                        <a class="nav-link" href="#" id="navbar" role="button">{{ Auth::user()->name }}</a>
                     </li>
 
-                    <li class="nav-item mx-0 mx-lg-1">
+                    <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
                         <form id="form" action="{{ route('logout') }}" method="POST">
                             @csrf
-                            <button onclick="event.preventDefault(); this.closest('form').submit();">
+                            <button class="btn btn-outline-light"
+                                onclick="event.preventDefault(); this.closest('form').submit();">
                                 Logout
                             </button>
                         </form>
