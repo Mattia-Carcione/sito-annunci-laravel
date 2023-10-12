@@ -17,11 +17,8 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-    
-
-        return view('announcements.index' , ['announcements' => Announcement::all()->sortByDesc('created_at')]);
-
-        //
+        $announcements=Announcement::orderBy('created_at','desc')->paginate(12);
+        return view('announcements.index' , compact('announcements'));
     }
 
     /**
