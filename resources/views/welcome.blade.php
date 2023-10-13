@@ -67,7 +67,7 @@
             
                 </div>
 
-                <!-- Categories Section-->
+{{--                 <!-- Categories Section-->
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Categories Section Heading-->
@@ -263,7 +263,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Footer-->
         <x-footer/>
         <!-- Copyright Section-->
