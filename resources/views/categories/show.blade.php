@@ -1,8 +1,8 @@
 <x-layout>
     <section class="py-5">
         <div class="container px-5 my-5">
-            <h2 class="fw-bolder text-center">Esplora la Categoria: {{ $category->name }}</h2>
-
+            <h1 class="fw-bolder text-center pt-5">Esplora la Categoria: {{ $category->name }}</h1>
+            <hr>
             <div class="row justify-content-center">
 
 
@@ -11,11 +11,9 @@
                         @if ($announcement->created_at->diffInHours(now()) <= 24)
                             <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                         @endif
-
-                        <div class="product-tumb">
-                            <img src="https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg"
-                                alt="">
-                        </div>
+                        <img class="img-fluid"
+                            src="https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg"
+                            alt="">
                         <div class="product-details">
                             <span class="product-catagory">{{ $announcement->category->name }}</span>
                             <h4><a style="color: #5478F0"
@@ -34,21 +32,14 @@
                         </div>
                     </div>
                 @empty
-
-
-
-
-
-
                     <div>
-                        <h2>Non sono presenti Annunci per questa categoria</h2>
-                        <h3>Pubblicane uno: <a href="{{ route('announcements.create') }}" class="btn btn-success">Nuovo
+                        <h3 class="text-center pt-4">Non sono presenti Annunci per questa categoria</h3>
+                        <h4 class="text-center pt-4">Pubblicane uno:
+                            <a href="{{ route('announcements.create') }}" class="btn btn-success">Nuovo
                                 Annuncio</a>
-                        </h3>
+                        </h4>
                     </div>
                 @endforelse
-
-
             </div>
         </div>
     </section>
