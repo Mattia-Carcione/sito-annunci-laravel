@@ -44,14 +44,26 @@
                 @endguest
 
                 @auth
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a>
+                    {{-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                             href="{{ route('announcements.create') }}">Inserisci annuncio</a>
                     </li>
+
+                    @if (Auth::user()->is_revisor)
+                        <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
+                            <a class="nav-link" href="{{ route('revisor.index') }}" id="navbar" role="button">Zona
+                                Revisore
+                                <span>
+                                    {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                    <span>Unread Messages</span>
+                                </span>
+                            </a>
+                        </li>
+                    @endif
 
                     <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
                         <a class="nav-link" href="#" id="navbar" role="button">{{ Auth::user()->name }}</a>
@@ -67,8 +79,6 @@
                         </form>
                     </li>
                 @endauth
-
-
             </ul>
         </div>
     </div>

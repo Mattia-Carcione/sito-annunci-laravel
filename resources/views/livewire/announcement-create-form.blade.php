@@ -7,7 +7,7 @@
             {{-- Message Success --}}
             @if (session()->has('message'))
                 <div class="flex flex-row justify-content-center alert alert-success">
-                    {{ session('message') }}
+                    {{session('message') }}
                 </div>
             @endif
 

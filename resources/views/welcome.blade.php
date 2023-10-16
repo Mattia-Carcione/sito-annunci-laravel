@@ -1,8 +1,12 @@
 <x-layout>
-
     <main id="page-top">
         <!-- Masthead-->
         <header class="masthead header-color-personal text-white text-center">
+            @if (session()->has('access.denied'))
+                <div class="flex flex-row justify-content-center alert alert-danger">
+                    {{ session('access.denied') }}
+                </div>
+            @endif
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
@@ -65,7 +69,7 @@
 
                 </div>
 
-{{--                 <!-- Categories Section-->
+                {{--                 <!-- Categories Section-->
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Categories Section Heading-->
@@ -262,97 +266,102 @@
                 </div>
             </div>
         </section> --}}
-        <!-- Footer-->
-        <x-footer/>
-        <!-- Copyright Section-->
-        <x-copyright />
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1"
-            aria-labelledby="portfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button"
-                            data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
+                <!-- Footer-->
+                <x-footer />
+                <!-- Copyright Section-->
+                <x-copyright />
+                <!-- Portfolio Modals-->
+                <!-- Portfolio Modal 1-->
+                <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1"
+                    aria-labelledby="portfolioModal1" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header border-0"><button class="btn-close" type="button"
+                                    data-bs-dismiss="modal" aria-label="Close"></button></div>
+                            <div class="modal-body text-center pb-5">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <!-- Portfolio Modal - Title-->
+                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log
+                                                Cabin</h2>
+                                            <!-- Icon Divider-->
+                                            <div class="divider-custom">
+                                                <div class="divider-custom-line"></div>
+                                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                                <div class="divider-custom-line"></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/portfolio/cabin.png"
+                                                alt="..." />
+                                        </div>
                                     </div>
-                                    <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+                                    <!-- Portfolio Item 2-->
+                                    <div class="col-md-6 col-lg-4 mb-5">
+                                        <div class="portfolio-item mx-auto" data-bs-toggle="modal"
+                                            data-bs-target="#portfolioModal2">
+                                            <div
+                                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                                        class="fas fa-plus fa-3x"></i></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
+                                        </div>
+                                    </div>
+                                    <!-- Portfolio Item 3-->
+                                    <div class="col-md-6 col-lg-4 mb-5">
+                                        <div class="portfolio-item mx-auto" data-bs-toggle="modal"
+                                            data-bs-target="#portfolioModal3">
+                                            <div
+                                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                                        class="fas fa-plus fa-3x"></i></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/portfolio/circus.png"
+                                                alt="..." />
+                                        </div>
+                                    </div>
+                                    <!-- Portfolio Item 4-->
+                                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                                        <div class="portfolio-item mx-auto" data-bs-toggle="modal"
+                                            data-bs-target="#portfolioModal4">
+                                            <div
+                                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                                        class="fas fa-plus fa-3x"></i></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
+                                        </div>
+                                    </div>
+                                    <!-- Portfolio Item 5-->
+                                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                                        <div class="portfolio-item mx-auto" data-bs-toggle="modal"
+                                            data-bs-target="#portfolioModal5">
+                                            <div
+                                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                                        class="fas fa-plus fa-3x"></i></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/portfolio/safe.png"
+                                                alt="..." />
+                                        </div>
+                                    </div>
+                                    <!-- Portfolio Item 6-->
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="portfolio-item mx-auto" data-bs-toggle="modal"
+                                            data-bs-target="#portfolioModal6">
+                                            <div
+                                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                                        class="fas fa-plus fa-3x"></i></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/portfolio/submarine.png"
+                                                alt="..." />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Portfolio Item 2-->
-                            <div class="col-md-6 col-lg-4 mb-5">
-                                <div class="portfolio-item mx-auto" data-bs-toggle="modal"
-                                    data-bs-target="#portfolioModal2">
-                                    <div
-                                        class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                                class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
-                                </div>
-                            </div>
-                            <!-- Portfolio Item 3-->
-                            <div class="col-md-6 col-lg-4 mb-5">
-                                <div class="portfolio-item mx-auto" data-bs-toggle="modal"
-                                    data-bs-target="#portfolioModal3">
-                                    <div
-                                        class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                                class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
-                                </div>
-                            </div>
-                            <!-- Portfolio Item 4-->
-                            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                                <div class="portfolio-item mx-auto" data-bs-toggle="modal"
-                                    data-bs-target="#portfolioModal4">
-                                    <div
-                                        class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                                class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
-                                </div>
-                            </div>
-                            <!-- Portfolio Item 5-->
-                            <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                                <div class="portfolio-item mx-auto" data-bs-toggle="modal"
-                                    data-bs-target="#portfolioModal5">
-                                    <div
-                                        class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                                class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
-                                </div>
-                            </div>
-                            <!-- Portfolio Item 6-->
-                            <div class="col-md-6 col-lg-4">
-                                <div class="portfolio-item mx-auto" data-bs-toggle="modal"
-                                    data-bs-target="#portfolioModal6">
-                                    <div
-                                        class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                                class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
+        </section>
+
     </main>
 
 </x-layout>
