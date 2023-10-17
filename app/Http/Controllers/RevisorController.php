@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Mail;
 class RevisorController extends Controller
 {
     public function __construct(){
-        $this->middleware('IsRevisor')->except('becomeRevisor');
+        $this->middleware('isRevisor')->except('becomeRevisor');
         $this->middleware('auth')->only('becomeRevisor');
     }
     public function index()
