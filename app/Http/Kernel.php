@@ -2,10 +2,14 @@
 
 namespace App\Http;
 
+use App\Console\Commands\MakeUserRevisor;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
 {
+    protected $commands = [
+        MakeUserRevisor::class
+    ];
     /**
      * The application's global HTTP middleware stack.
      *
