@@ -16,20 +16,31 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//Rotta Homepage
 Route::get('/', [RouteController::class, 'homepage'])->name('homepage');
 
+
+//Rotte Dashboard
 Route::get('/dashboard', function () {
     return view('dashboards.dashboard');
 });
 
+
+//Rotte Annunci
+Route::get('/search/announcement', [AnnouncementController::class, 'search'])
+->name('announcements.search');
 Route::resource('announcements', AnnouncementController::class);
+
+//Rotte Categorie
 Route::resource('categories', CategoryController::class);
+
 
 //Rotte revisore
 
 Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
-Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
-Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
+Route::patch('/accept/announcement/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
+Route::patch('/reject/announcement/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
 Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+

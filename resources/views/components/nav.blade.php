@@ -55,11 +55,10 @@
 
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
-                            <a class="nav-link" href="{{ route('revisor.index') }}" id="navbar" role="button">Zona
-                                Revisore
-                                <span>
+                            <a class="nav-link position-relative" aria-current="page" href="{{ route('revisor.index') }}" id="navbar" role="button">Zona Revisore
+                                <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
-                                    <span>Unread Messages</span>
+                                    <span class="visually-hidden">Unread Messages</span>
                                 </span>
                             </a>
                         </li>
@@ -80,6 +79,10 @@
                     </li>
                 @endauth
             </ul>
+            <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="GET">
+                <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Cerca</button>
+            </form>
         </div>
     </div>
 </nav>

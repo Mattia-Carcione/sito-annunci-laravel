@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Announcement;
 use App\Http\Requests\StoreAnnouncementRequest;
 use App\Http\Requests\UpdateAnnouncementRequest;
+use Illuminate\Http\Request;
+
 
 class AnnouncementController extends Controller
 {
@@ -70,4 +72,8 @@ class AnnouncementController extends Controller
     // {
     //     //
     // }
+    public function search(Request $request){
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(8);
+        return view('announcements.index', compact('announcements'));
+    }
 }
