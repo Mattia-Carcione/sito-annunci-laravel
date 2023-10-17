@@ -31,12 +31,12 @@
                             <form action="{{route('revisor.accept_announcement', ['announcement'=>$announcements_to_check])}}" style="display:inline" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-success">ACCETTA</button>
+                                <button type="submit" class="btn btn-success">Accetta</button>
                             </form>
                             <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcements_to_check])}}" style="display:inline" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-danger">RIFIUTA</button>
+                                <button type="submit" class="btn btn-danger">Rifiuta</button>
                             </form>
                         </div>
                 </section>

@@ -267,9 +267,9 @@
             </div>
         </section> --}}
                 <!-- Footer-->
-                <x-footer />
+
                 <!-- Copyright Section-->
-                <x-copyright />
+
                 <!-- Portfolio Modals-->
                 <!-- Portfolio Modal 1-->
                 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1"

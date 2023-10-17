@@ -35,7 +35,7 @@
                     <div>
                         <h3 class="text-center pt-4">Non sono presenti Annunci per questa categoria</h3>
                         <h4 class="text-center pt-4">Pubblicane uno:
-                            <a href="{{ route('announcements.create') }}" class="btn btn-success">Nuovo
+                            <a href="{{ route('announcements.create') }}" style="background-color: #C5DCDC" class="btn">Nuovo
                                 Annuncio</a>
                         </h4>
                     </div>
