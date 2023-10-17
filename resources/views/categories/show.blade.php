@@ -6,7 +6,7 @@
             <div class="row justify-content-center">
 
 
-                @forelse ($category->announcements as $announcement)
+                @forelse ($category->announcements->where('is_accepted', true) as $announcement)
                     <div class="product-card col-12 col-md-4 m-2">
                         @if ($announcement->created_at->diffInHours(now()) <= 24)
                             <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>

@@ -19,7 +19,7 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        $announcements=Announcement::orderBy('created_at','desc')->paginate(8);
+        $announcements=Announcement::orderBy('created_at','desc')->where('is_accepted', true)->paginate(8);
         return view('announcements.index' , compact('announcements'));
     }
 
@@ -52,10 +52,10 @@ class AnnouncementController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Announcement $announcement)
-    {
+    //public function edit(Announcement $announcement)
+    //{
         //
-    }
+    //}
 
     /**
      * Update the specified resource in storage.
