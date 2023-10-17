@@ -14,22 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar sticky-top fixed-top bg-dark flex-md-nowrap p-0 shadow d-md-none" data-bs-theme="dark"
-    style="">
-    <a href="{{ route('homepage') }}" class="d-inline-flex align-items-center py-1 link-body-emphasis text-decoration-none">
-        <img class="bi rounded" src="\book.jpg" width="40" height="32" role="img">
-        <span class="fs-4 fw-bold">Bookstore</span>
-    </a>
 
-    <ul class="navbar-nav flex-row d-md-none">
-        <li class="nav-item text-nowrap">
-            <button class="nav-link px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
-                aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation"><i
-                    class="fa-solid fa-bars" style="color: #ffffff;"></i>
-            </button>
-        </li>
-    </ul>
-</nav>
 
 <div class="container-fluid">
     <div class="row">
@@ -37,7 +22,7 @@
             <div class="offcanvas-md offcanvas-end bg-secondary-subtle" tabindex="-1" id="sidebarMenu"
                 aria-labelledby="sidebarMenuLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="sidebarMenuLabel">Bookstore</h5>
+                    <h5 class="offcanvas-title" id="sidebarMenuLabel">FindEasy</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
                         aria-label="Close">
                     </button>
@@ -54,7 +39,7 @@
 
                         <h6
                             class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-2 text-dark text-uppercase">
-                            <span>Prodotti</span>
+                            <span>Annunci</span>
                         </h6>
 
                         <li class="nav-item">
@@ -85,7 +70,7 @@
                         <li class="nav-item">
                             <a class="nav-link d-flex align-items-center gap-2 text-dark w-50 link-dash"
                                 href="{{ route('homepage') }}">
-                                Bookstore
+                                FindEasy
                             </a>
                         </li>
                         <li class="nav-item">
@@ -107,10 +92,10 @@
             <nav class="container-md-fluid py-4">
                 <div class="d-flex flex-wrap align-items-center justify-content-between py-1 mb-1 border-bottom">
                     <div class="col-md-3 mb-md-0 text-start d-none d-md-block">
-                        <a href="{{ route('homepage') }}"
+                        <a href="{{ route('revisor.index') }}"
                             class="d-inline-flex align-items-center link-body-emphasis text-decoration-none">
-                            <img class="bi rounded" src="\book.jpg" width="40" height="32" role="img">
-                            <span class="fs-4 fw-bold">Bookstore</span>
+                            
+                            <span class="fs-4 fw-bold">FindEasy Revisor</span>
                         </a>
                     </div>
 

@@ -1,7 +1,8 @@
 <x-dashboard>
-    <h1>{{ $announcements_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}</h1>
-    <a href="{{route('revisor.accepted')}}" class="btn btn-outline-dark">Visualizza tutti gli annunci</a>
-    @if ($announcements_to_check)
+    <a href="{{route('revisor.index')}}" class="btn btn-outline-dark">Visualizza annunci da revisionare</a>
+    <h1>{{ $announcement ? 'Ecco l\'ultimo annuncio accettato' : 'Non ci sono annunci accettati' }}</h1>
+ 
+    @if ($announcement)
         <div class="container mt-5 pt-5">
             <h1 class="pt-5 text-center">Dettagli</h1>
             <div class="row justify-content-center">
@@ -20,21 +21,17 @@
                     </div>
                     <div class="product__info">
                         <div class="title">
-                            <h1>{{ $announcements_to_check->title }}</h1>
+                            <h1>{{ $announcement->title }}</h1>
                         </div>
                         <div class="price">
-                            € <span>{{ $announcements_to_check->price }}</span>
+                            € <span>{{ $announcement->price }}</span>
                         </div>
 
                         <div class="description">
                             <h3>DESCRIZIONE</h3>
-                            <P>{{ $announcements_to_check->description }}</P>
-                            <form action="{{route('revisor.accept_announcement', ['announcement'=>$announcements_to_check])}}" style="display:inline" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="btn btn-success">Accetta</button>
-                            </form>
-                            <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcements_to_check])}}" style="display:inline" method="POST">
+                            <P>{{ $announcement->description }}</P>
+                           
+                            <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcement])}}" style="display:inline" method="POST">
                                 @csrf
                                 @method('PATCH')
                                 <button type="submit" class="btn btn-danger">Rifiuta</button>
@@ -45,5 +42,5 @@
         </div>
     @endif
 
- 
+    
 </x-dashboard>

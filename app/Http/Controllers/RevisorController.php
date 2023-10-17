@@ -18,7 +18,7 @@ class RevisorController extends Controller
     }
     public function index()
     {
-        $announcements_to_check = Announcement::where('is_accepted',null)->first();
+        $announcements_to_check = Announcement::where('is_accepted', null)->first();
         return view('revisors.index', compact('announcements_to_check'));
     }
     public function acceptAnnouncement(Announcement $announcement)
@@ -41,5 +41,10 @@ class RevisorController extends Controller
     public function makeRevisor(User $user){
         Artisan::call('FindEasy:makeUserRevisor', ["email" => $user->email]);
         return redirect('/')->with('message', 'Complimenti! l\'utente è diventato revisore');
+    }
+
+    public function acceptedIndex () {
+        $announcement=Announcement::orderBy('updated_at','desc')->where('is_accepted', true)->first();
+        return view('revisors.acceptedindex', compact('announcement'));
     }
 }
