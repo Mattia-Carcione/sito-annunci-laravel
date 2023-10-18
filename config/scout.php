@@ -118,14 +118,14 @@ return [
 
     'tntsearch'=>[
         'storage'=>storage_path(),
-        'fuzzines'=>env('TNTSEARCH_FUZZINES', true),
+        'fuzziness'=>env('TNTSEARCH_FUZZINESS', true),
         'fuzzy'=>[
-            'prefix_lenght'=>2,
+            'prefix_lenght'=>5,
             'max_expansions'=>50,
-            'distance'=>2,
+            'distance'=>5,
         ], 
-        'hasYouType'=> false,
-        'searchBoolean'=>env('TNTSEARCH_BOOLEAN', false),
+        'asYouType'=> false,
+        'searchBoolean'=> env('TNTSEARCH_BOOLEAN', false),
         'maxDocs'=>env('TNTSEARCH_MAX_DOCS', 500),  
     ],
 
