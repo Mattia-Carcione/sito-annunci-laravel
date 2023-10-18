@@ -30,12 +30,24 @@
                         <div class="description">
                             <h3>DESCRIZIONE</h3>
                             <P>{{ $announcement->description }}</P>
-                           
+                        @if ($announcement->is_accepted==true)
+
                             <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcement])}}" style="display:inline" method="POST">
                                 @csrf
                                 @method('PATCH')
                                 <button type="submit" class="btn btn-danger">Rifiuta</button>
                             </form>
+                            
+                        @else
+
+                            <form action="{{route('revisor.accept_announcement', ['announcement'=>$announcement])}}" style="display:inline" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="btn btn-success">Accetta</button>
+                            </form>
+                            
+                        @endif   
+                           
                         </div>
                 </section>
             </div>

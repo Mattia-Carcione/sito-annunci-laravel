@@ -44,7 +44,7 @@ class RevisorController extends Controller
     }
 
     public function acceptedIndex () {
-        $announcement=Announcement::orderBy('updated_at','desc')->where('is_accepted', true)->first();
+        $announcement=Announcement::orderBy('updated_at','desc')->where('is_accepted', '!=', null)->first();
         return view('revisors.acceptedindex', compact('announcement'));
     }
 }
