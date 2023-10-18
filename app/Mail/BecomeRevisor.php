@@ -24,7 +24,7 @@ class BecomeRevisor extends Mailable
     }
 
     public function build(){
-        return $this->from('findeasy.it@noreply.com')->view('mail.become_revisor');
+        return $this->from('findeasy.it@noreply.com');
     }
 
     /**
@@ -43,7 +43,7 @@ class BecomeRevisor extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'mail.become_revisor',
         );
     }
 
