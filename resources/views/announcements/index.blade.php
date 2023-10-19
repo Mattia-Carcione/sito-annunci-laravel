@@ -1,10 +1,10 @@
 <x-layout>
-    <div class="container my-5 py-5 min-vh-100">
+    <div class="container py-5" style="margin-top: 2%; height:auto" >
         <h1 class="pt-5 text-center">Annunci</h1>
         <hr>
-        <div class="row justify-content-start mb-3 p-4">
+        <div class="row justify-content-center mb-3 p-4">
             @forelse ($announcements as $announcement)
-                <div class="product-card me-2" style="width: 95%;">
+                <div class="product-card me-2 mt-5" style="width: 95%;">
                     @if ($announcement->created_at->diffInHours(now()) <= 24)
                         <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                     @endif
