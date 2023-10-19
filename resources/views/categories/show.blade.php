@@ -3,7 +3,7 @@
         <div class="container px-5 my-5">
             <h1 class="fw-bolder text-center pt-5">Esplora la Categoria: {{ $category->name }}</h1>
             <hr>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center pt-5">
 
 
                 @forelse ($category->announcements->where('is_accepted', true) as $announcement)
