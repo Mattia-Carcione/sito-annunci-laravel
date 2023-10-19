@@ -1,7 +1,8 @@
 <x-layout>
     <div class="container mt-5 pt-5">
-        <h1 class="pt-5 text-center">Dettagli</h1>
+
         <div class="row justify-content-center">
+            <h1 class="pt-5 text-center">Dettagli</h1>
             <section class="product">
                 <div class="product__photo">
                     <div class="photo-container">
