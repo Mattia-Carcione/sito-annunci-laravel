@@ -1,4 +1,4 @@
-    <main class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+    <main class="d-flex flex-column justify-content-center align-items-center min-vh-100 mt-5 pt-5">
         <h1 class="py-2">Aggiungi un annuncio</h1>
 
         <form class="container" wire:submit.prevent="store">
