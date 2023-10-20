@@ -19,6 +19,7 @@
                         <p>
                             {{ $announcement->description }}
                         </p>
+                        <p class="card-footer my-2">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Autore: {{$announcement->user->name ?? ''}}</p>
                         <div class="product-bottom-details">
                             <div class="product-price">€{{ $announcement->price }}</div>
                             <div class="product-links">

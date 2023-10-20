@@ -22,11 +22,13 @@
                             <p>
                                 {{ $announcement->description }}
                             </p>
+                            <p class="card-footer my-2">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} - Autore: {{$announcement->user->name ?? ''}}</p>
                             <div class="product-bottom-details">
                                 <div class="product-price">€{{ $announcement->price }}</div>
                                 <div class="product-links">
                                     <a href=""><i class="fa fa-heart"></i></a>
                                     <a href=""><i class="fa fa-shopping-cart"></i></a>
+
                                 </div>
                             </div>
                         </div>
@@ -34,8 +36,8 @@
                 @empty
                     <div>
                         <h3 class="text-center pt-4">Non sono presenti Annunci per questa categoria</h3>
-                        <h4 class="text-center pt-4">Pubblicane uno:
-                            <a href="{{ route('announcements.create') }}" style="background-color: #C5DCDC" class="btn">Nuovo
+                        <h4 class="text-center pt-3">Pubblicane uno: <br>
+                            <a href="{{ route('announcements.create') }}" class="btn mt-3" style="background-color: #C5DCDC">Nuovo
                                 Annuncio</a>
                         </h4>
                     </div>
