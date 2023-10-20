@@ -56,7 +56,7 @@
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
                             <a class="nav-link position-relative" aria-current="page" href="{{ route('revisor.index') }}" id="navbar" role="button">Zona Revisore
-                                <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill" style="background-color: #C5DCDC">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
                                     <span class="visually-hidden">Unread Messages</span>
                                 </span>
