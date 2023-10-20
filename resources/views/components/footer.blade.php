@@ -28,7 +28,7 @@
                     Vuoi lavorare con noi? Registrati e <br>
                 </p>
                 <p>
-                    <a class="btn" style="background-color: #C5DCDC" href="{{ route('become.revisor') }}">Clicca
+                    <a class="btn text-dark" style="background-color: #C5DCDC" href="{{ route('become.revisor') }}">Clicca
                         qui</a>
                 </p>
 
