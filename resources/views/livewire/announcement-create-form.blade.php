@@ -32,6 +32,39 @@
                 </select>
             </div>
 
+            
+            {{--Input image  --}}
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="">Immagini</label>
+                <input type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror " wire:model="temporary_images" />
+                @error('temporary_images.*')
+                    <span class="error text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+            
+            @if (!empty($images))
+           
+
+            <div class="row">
+                <div class="col-12">
+                    <p>photo preview</p>
+                    <div class="row border border-4 border-info rounded shadow py-4">
+                        @foreach ( $images as $key=>$image )
+                        <div class="col-6 my-3">
+                            {{-- <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}})"></div> --}}
+                            <img src="{{$image->temporaryUrl()}}" alt="">
+                            <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                        </div>
+                            
+                        @endforeach
+                    </div>
+                </div>                
+            </div>
+                
+            @endif
+
+
             <!-- Description textarea -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="description">Descrizione dell'articolo</label>
@@ -51,6 +84,7 @@
                     <span class="error text-danger">{{ $message }}</span>
                 @enderror
             </div>
+
 
             <!-- Submit button -->
             <button type="submit" style="background-color: #C5DCDC" class="btn btn-block mb-4"><i class="fa-solid fa-circle-plus"></i>
