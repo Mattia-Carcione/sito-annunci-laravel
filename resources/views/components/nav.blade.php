@@ -77,6 +77,29 @@
                           </ul>
                     </li>
                 @endauth
+
+                <div class="dropdown">
+                    <a class=" dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Lingua
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        
+                        <li>
+                            <x-_locale lang='it' nation='it'/>
+                        </li>
+
+                        <li>
+                            <x-_locale lang='en' nation='gb'/>
+                        </li>
+
+                        <li>
+                            <x-_locale lang='es' nation='es'/>
+                        </li>
+
+                    </ul>
+                </div>
             </ul>
             <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="GET">
                 <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">

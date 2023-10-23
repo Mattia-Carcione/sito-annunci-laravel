@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container py-5" style="margin-top: 2%; height:auto" >
-        <h1 class="pt-5 text-center">Annunci</h1>
+        <h1 class="pt-5 text-center">{{__('ui.allAnnouncements')}}</h1>
         <hr>
         <div class="row justify-content-center mb-3 p-4">
             @forelse ($announcements as $announcement)

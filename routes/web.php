@@ -25,6 +25,8 @@ Route::get('/dashboard', function () {
     return view('dashboards.dashboard');
 });
 
+//Rotta lingue
+Route::post('/language/{lang}', [RouteController::class, 'setLanguage'])->name('set_language_locale');
 
 //Rotte Annunci
 Route::get('/search/announcement', [AnnouncementController::class, 'search'])
