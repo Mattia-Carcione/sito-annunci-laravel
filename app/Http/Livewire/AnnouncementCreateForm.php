@@ -13,7 +13,7 @@ class AnnouncementCreateForm extends Component
 
     use WithFileUploads;
 
-    public $title, $description, $price, $category, $temporary_images, $images = [];
+    public $title, $description, $price, $category, $temporary_images, $images, $announcement = [];
     protected $rules = [
         'title' => 'required|min:4',
         'description' => 'required|min:8',
@@ -29,26 +29,27 @@ class AnnouncementCreateForm extends Component
         'description.min' => 'La descrizione deve avere almeno 8 caratteri',
         'price.required' => 'Il prezzo è obbligatorio',
         'price.numeric' => 'Il prezzo deve essere un numero',
-        'temporary_images.required' =>'L\'immagine è richiesta',
-        'temporary_images.*.image' =>'I file devono essere immagini',
-        'temporary_images.*.max' =>'L\'immagine deve essere massimo di un mb'
+        'temporary_images.required' => 'L\'immagine è richiesta',
+        'temporary_images.*.image' => 'I file devono essere immagini',
+        'temporary_images.*.max' => 'L\'immagine deve essere massimo di un mb'
 
     ];
 
-    public function updatedTemporaryImages () {
-         if ($this->validate([
-            'temporary_images.*'=> 'image| max: 1024'
-         ])) {
-            
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate([
+            'temporary_images.*' => 'image| max: 1024'
+        ])) {
+
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
-         }
-         
+        }
     }
 
-    public function removeImage($key) {
-        if(in_array($key, array_keys($this->images))) {
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))) {
             unset($this->images[$key]);
         }
     }
@@ -57,29 +58,29 @@ class AnnouncementCreateForm extends Component
     public function store()
     {
         $this->validate();
-        $category = Category::find($this->category);
 
-        $announcement = $category->announcements()->create([
-            'title' => $this->title,
-            'description' => $this->description,
-            'price' => $this->price
-        ]);
+        $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
+
         if (count($this->images)) {
-            foreach($this->images as $image) 
-            { $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
-            } 
+            foreach ($this->images as $image) {
+                $this->announcement->images()->create(['path' => $image->store('images', 'public')]);
+            }
         }
-        Auth::user()->announcements()->save($announcement);
+
+        $this->announcement->user()->associate(Auth::user());
+        $this->announcement->save();
 
         session()->flash('message', 'Annuncio inserito con successo');
         $this->clearForm();
     }
+
     public function render()
     {
         return view('livewire.announcement-create-form');
     }
 
-    public function clearForm() {
+    public function clearForm()
+    {
         $this->title = '';
         $this->description = '';
         $this->price = '';
@@ -88,7 +89,8 @@ class AnnouncementCreateForm extends Component
         $this->temporary_images = '';
     }
 
-    protected function updated($propertyName) {
+    protected function updated($propertyName)
+    {
         $this->validateOnly($propertyName);
     }
 }
