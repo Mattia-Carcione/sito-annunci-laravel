@@ -13,14 +13,14 @@
                     <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('announcements.index') }}">Annunci</a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('announcements.index') }}">{{__('ui.announcements')}}</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1 align-items-center d-flex">
 
                     <div class="dropdown">
                         <a class=" dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Categorie
+                            {{ __('ui.categories') }}
                         </a>
 
                         <ul class="dropdown-menu">
@@ -36,7 +36,7 @@
                 </li>
                 @guest
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('register') }}">Registrati</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('register') }}">{{__('ui.register')}}</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('login') }}">Login</a>
@@ -81,7 +81,7 @@
                 <div class="dropdown">
                     <a class=" dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Lingua
+                        {{ __('ui.language') }}
                     </a>
 
                     <ul class="dropdown-menu">
@@ -103,7 +103,7 @@
             </ul>
             <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="GET">
                 <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn" style="background-color: #C5DCDC" type="submit">Cerca</button>
+                <button class="btn" style="background-color: #C5DCDC" type="submit">{{__('ui.search')}}</button>
             </form>
         </div>
     </div>

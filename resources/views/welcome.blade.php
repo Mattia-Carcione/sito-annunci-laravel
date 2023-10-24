@@ -19,15 +19,14 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Tutto ciò che ti serve, quando vuoi tu, dove vuoi
-                    tu.</p>
+                <p class="masthead-subheading font-weight-light mb-0">{{__('ui.subtitle')}}</p>
             </div>
         </header>
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Annunci</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{__('ui.announcements')}}</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>

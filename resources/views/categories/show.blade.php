@@ -1,7 +1,7 @@
 <x-layout>
     <section class="py-5">
         <div class="container px-5 my-5">
-            <h1 class="fw-bolder text-center pt-5">Esplora la Categoria: {{ $category->name }}</h1>
+            <h1 class="fw-bolder text-center pt-5">{{__('ui.explore')}} {{ $category->name }}</h1>
             <hr>
             <div class="row justify-content-center pt-5">
 
@@ -35,10 +35,9 @@
                     </div>
                 @empty
                     <div>
-                        <h3 class="text-center pt-4">Non sono presenti Annunci per questa categoria</h3>
-                        <h4 class="text-center pt-3">Pubblicane uno: <br>
-                            <a href="{{ route('announcements.create') }}" class="btn mt-3" style="background-color: #C5DCDC">Nuovo
-                                Annuncio</a>
+                        <h3 class="text-center pt-4">{{__('ui.noAnnouncements')}}</h3>
+                        <h4 class="text-center pt-3">{{__('ui.announcementCreate')}}<br>
+                            <a href="{{ route('announcements.create') }}" class="btn mt-3" style="background-color: #C5DCDC">{{__('ui.publish')}}</a>
                         </h4>
                     </div>
                 @endforelse
