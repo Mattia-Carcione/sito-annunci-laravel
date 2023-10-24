@@ -13,23 +13,23 @@ use Illuminate\Support\Facades\Mail;
 class RevisorController extends Controller
 {
     public function __construct(){
-        $this->middleware('isRevisor')->except('becomeRevisor');
+        $this->middleware('isRevisor')->except('becomeRevisor', 'makeRevisor');
         $this->middleware('auth')->only('becomeRevisor');
     }
     public function index()
     {
-        $announcements_to_check = Announcement::where('is_accepted', null)->first();
-        return view('revisors.index', compact('announcements_to_check'));
+        $announcements = Announcement::where('is_accepted', null)->first();
+        return view('revisors.revisorhome', compact('announcements'));
     }
     public function acceptAnnouncement(Announcement $announcement)
     {
         $announcement->setAccepted(true);
-        return redirect()->back()->with('message', 'Complimenti, hai accetto l\'annuncio');
+        return redirect()->back()->with('success', 'Complimenti, hai accetto l\'annuncio');
     }
     public function rejectAnnouncement(Announcement $announcement)
     {
         $announcement->setAccepted(false);
-        return redirect()->back()->with('message', 'Non hai accettato l\'annuncio');
+        return redirect()->back()->with('fail', 'Non hai accettato l\'annuncio');
     }
 
     public function becomeRevisor()
@@ -40,11 +40,21 @@ class RevisorController extends Controller
 
     public function makeRevisor(User $user){
         Artisan::call('FindEasy:makeUserRevisor', ["email" => $user->email]);
-        return redirect('/')->with('message', 'Complimenti! l\'utente è diventato revisore');
+        return redirect('/')->with('message', 'Complimenti! L\'utente è diventato revisore');
     }
 
-    public function acceptedIndex () {
-        $announcement=Announcement::orderBy('updated_at','desc')->where('is_accepted', '!=', null)->first();
-        return view('revisors.acceptedindex', compact('announcement'));
+    public function revisedShow (Announcement $announcement) {
+        
+        return view('revisors.revisedshow', compact('announcement'));
+    }
+
+    public function revisedIndex () {
+        $announcements = Announcement::orderBy('updated_at','desc')->where('is_accepted', '!=', null)->paginate(10);
+        return view('revisors.revisedindex', compact('announcements'));
+    }
+
+    public function search(Request $request){
+        $announcements = Announcement::search($request->searched)->where('is_accepted', '!=', null)->paginate(10);
+        return view('revisors.revisedindex', compact('announcements'));
     }
 }

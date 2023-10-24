@@ -56,7 +56,7 @@
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
                             <a class="nav-link position-relative" aria-current="page" href="{{ route('revisor.index') }}" id="navbar" role="button">Zona Revisore
-                                <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill" style="background-color: #C5DCDC">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
                                     <span class="visually-hidden">Unread Messages</span>
                                 </span>
@@ -64,24 +64,46 @@
                         </li>
                     @endif
 
-                    <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
-                        <a class="nav-link" href="#" id="navbar" role="button">{{ Auth::user()->name }}</a>
-                    </li>
-
-                    <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
-                        <form id="form" action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            <button class="btn btn-outline-light"
-                                onclick="event.preventDefault(); this.closest('form').submit();">
-                                Logout
-                            </button>
-                        </form>
+                    <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="#" role="button" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profilo</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); getElementById('form').submit();">
+                                Logout</a></li>
+                                <form id="form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                </form>
+                          </ul>
                     </li>
                 @endauth
+
+                <div class="dropdown">
+                    <a class=" dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Lingua
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        
+                        <li>
+                            <x-_locale lang='it' nation='it'/>
+                        </li>
+
+                        <li>
+                            <x-_locale lang='en' nation='gb'/>
+                        </li>
+
+                        <li>
+                            <x-_locale lang='es' nation='es'/>
+                        </li>
+
+                    </ul>
+                </div>
             </ul>
             <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="GET">
                 <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Cerca</button>
+                <button class="btn" style="background-color: #C5DCDC" type="submit">Cerca</button>
             </form>
         </div>
     </div>

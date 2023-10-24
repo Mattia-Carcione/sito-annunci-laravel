@@ -37,7 +37,7 @@
                 <!-- annunci -->
                 <div class="container mt-5 pt-5">
 
-                    <div class="row">
+                    <div class="row justify-content-center mb-3 p-4">
                         @forelse ($announcements as $announcement)
                             <div class="product-card col-12 col-md-4 m-2">
                                 @if ($announcement->created_at->diffInHours(now()) <= 24)
