@@ -15,6 +15,6 @@ return [
     'here'=>'Click here',
     'explore' => 'Explore the category:',
     'noAnnouncements'=>'There are no announcements for this category',
-    'annaouncementCreate' => 'Publish one: ',
+    'announcementCreate' => 'Publish one: ',
     'publish' => 'Publish',
 ];

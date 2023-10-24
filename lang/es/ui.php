@@ -15,6 +15,6 @@ return [
     'here'=>'Clicca aqui',
     'explore' => 'Explora la categoria:',
     'noAnnouncements'=>'No hay anuncios para esta categoria',
-    'annaouncementCreate' => 'Publica uno: ',
+    'announcementCreate' => 'Publica uno: ',
     'publish' => 'Publicar',
 ];

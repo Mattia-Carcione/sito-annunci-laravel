@@ -1,4 +1,4 @@
-    <main class="d-flex flex-column justify-content-center align-items-center min-vh-100 mt-5 pt-5">
+    <main class="d-flex flex-column justify-content-center align-items-center  mt-5 pt-5">
         <h1 class="py-2">Aggiungi un annuncio</h1>
 
         <form class="container" wire:submit.prevent="store">
@@ -49,11 +49,11 @@
             <div class="row">
                 <div class="col-12">
                     <p>photo preview</p>
-                    <div class="row border border-4 border-info rounded shadow py-4">
+                    <div class="row border border-4 border-info rounded  py-4">
                         @foreach ( $images as $key=>$image )
                         <div class="col-6 my-3">
                             {{-- <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}})"></div> --}}
-                            <img src="{{$image->temporaryUrl()}}" alt="">
+                            <img src="{{$image->temporaryUrl()}}" alt="" class="img-responsive" style=" background-position: center; background-size: cover;">
                             <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
                         </div>
                             
