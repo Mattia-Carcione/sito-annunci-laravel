@@ -1,5 +1,5 @@
     <main class="d-flex flex-column justify-content-center align-items-center  mt-5 pt-5">
-        <h1 class="py-2">Aggiungi un annuncio</h1>
+        <h1 class="py-2">{{__('ui.createAnnouncement')}}</h1>
 
         <form class="container" wire:submit.prevent="store">
             @csrf
@@ -23,7 +23,7 @@
 
             <!-- Category select -->
             <div class="form-outline mb-4">
-                <label class="form-label" for="category">Categoria</label>
+                <label class="form-label" for="category">{{__('ui.category')}}</label>
                 <select type="text" class="form-control" wire:model.defer="category">
                     <option value="">--Categoria</option>
                     @foreach ($categories as $category)
@@ -36,7 +36,7 @@
             {{--Input image  --}}
 
             <div class="form-outline mb-4">
-                <label class="form-label" for="">Immagini</label>
+                <label class="form-label" for="">{{__('ui.images')}}</label>
                 <input type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror " wire:model="temporary_images" />
                 @error('temporary_images.*')
                     <span class="error text-danger">{{ $message }}</span>
@@ -48,7 +48,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <p>photo preview</p>
+                    <p>{{__('ui.imagesSelected')}}</p>
                     <div class="row border border-4 border-info rounded  py-4">
                         @foreach ( $images as $key=>$image )
                         <div class="col-6 my-3">
@@ -67,7 +67,7 @@
 
             <!-- Description textarea -->
             <div class="form-outline mb-4">
-                <label class="form-label" for="description">Descrizione dell'articolo</label>
+                <label class="form-label" for="description">{{__('ui.description')}}</label>
                 <textarea type="text" class="form-control @error('description') is-invalid @enderror" wire:model="description"
                     rows="4" placeholder="Inserisci la descrizione">
                 </textarea>
@@ -78,7 +78,7 @@
 
             {{-- Price input --}}
             <div class="form-outline mb-4">
-                <label class="form-label" for="price">Prezzo</label>
+                <label class="form-label" for="price">{{__('ui.price')}}</label>
                 <input type="text" class="form-control @error('price') is-invalid @enderror" wire:model="price" />
                 @error('price')
                     <span class="error text-danger">{{ $message }}</span>
@@ -88,6 +88,6 @@
 
             <!-- Submit button -->
             <button type="submit" style="background-color: #C5DCDC" class="btn btn-block mb-4"><i class="fa-solid fa-circle-plus"></i>
-                Aggiungi</button>
+                {{__('ui.create')}}</button>
         </form>
     </main>

@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container mt-5 pt-5 min-vh-100">
-        <h1 class="pt-5 text-center">Dettagli</h1>
+        <h1 class="pt-5 text-center">{{__('ui.detail')}}</h1>
         <hr>
         <div class="row bg-danger">
             <section class="product col-12">
@@ -40,16 +40,16 @@
                 <div class="product__info col-6 mx-5">
                     <div>
                         <div class="title">
-                            <h3>Titolo</h3>
+                            <h3>{{__('ui.title')}}</h3>
                             <p>{{ $announcement->title }}</p>
                         </div>
                         <div class="price">
-                            <h3>Prezzo</h3>
+                            <h3>{{__('ui.price')}}</h3>
                             € <span>{{ $announcement->price }}</span>
                         </div>
 
                         <div class="description">
-                            <h3>Descrizione</h3>
+                            <h3>{{__('ui.description')}}</h3>
                             <P>{{ $announcement->description }}</P>
                         </div>
                     </div>

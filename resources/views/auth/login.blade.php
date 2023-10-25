@@ -10,7 +10,7 @@
                             <div class="mb-md-5 mt-md-4 pb-5">
 
                                 <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                                <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                                <p class="text-white-50 mb-5">{{__('ui.loginToYourAccount')}}</p>
                                 <form action="{{ route('login') }}" method="POST">
                                     @csrf
                                     @method('POST')
@@ -41,8 +41,7 @@
                                         <label class="form-check-label" for="exampleCheck1">Ricordati di me</label>
                                     </div>
 
-                                    <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot
-                                            password?</a></p>
+                                    <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">{{__('ui.forgotPassword')}}</a></p>
 
                                     <button class=" gradient-custom btn btn-outline-light btn-lg px-5"
                                         type="submit">Login</button>
@@ -57,8 +56,8 @@
                             </div>
 
                             <div>
-                                <p class="mb-0">Don't have an account? <a href="{{ route('register') }}"
-                                        class="text-white-50 fw-bold">Registrati</a>
+                                <p class="mb-0">{{__('ui.dontHaveAnAccount')}} <a href="{{ route('register') }}"
+                                        class="text-white-50 fw-bold">{{__('ui.register')}}</a>
                                 </p>
                             </div>
                             </form>

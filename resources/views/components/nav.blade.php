@@ -50,12 +50,12 @@
                         <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a>
                     </li> --}}
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="{{ route('announcements.create') }}">Inserisci annuncio</a>
+                            href="{{ route('announcements.create') }}">{{__('ui.createAnnouncement')}}</a>
                     </li>
 
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center">
-                            <a class="nav-link position-relative" aria-current="page" href="{{ route('revisor.index') }}" id="navbar" role="button">Zona Revisore
+                            <a class="nav-link position-relative" aria-current="page" href="{{ route('revisor.index') }}" id="navbar" role="button">{{__('ui.revisorZone')}}</a>
                                 <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill" style="background-color: #C5DCDC">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
                                     <span class="visually-hidden">Unread Messages</span>
@@ -67,7 +67,7 @@
                     <li class="nav-item mx-0 mx-lg-1 d-flex align-items-center dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="#" role="button" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Profilo</a></li>
+                            <li><a class="dropdown-item" href="#">{{__('ui.profile')}}</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); getElementById('form').submit();">
                                 Logout</a></li>
