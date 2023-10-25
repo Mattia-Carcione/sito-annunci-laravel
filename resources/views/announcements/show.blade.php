@@ -7,10 +7,10 @@
                 <div>
                     <div id="carouselExampleFade" class="carousel slide carousel-fade">
                         @if ($announcement->images)
-                            <div class="carousel-inner">
+                            <div class="carousel-inner d-flex justify-content-center">
                                 @foreach ($announcement->images as $image)
-                                    <div class="carousel-item @if ($loop->first) active @endif">
-                                        <img src="{{ Storage::url($image->path) }}" class="d-block w-100"
+                                    <div class="carousel-item  @if ($loop->first) active @endif">
+                                        <img src="{{ $image->getUrl(300,300) }}" class="d-block"
                                             alt="...">
                                     </div>
                                 @endforeach
