@@ -1,26 +1,20 @@
 <x-layout>
     <main id="page-top">
         <!-- Masthead-->
-        <header class="masthead header-color-personal text-white text-center">
+        <header class="text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center justify-content-center">
             @if (session()->has('access.denied'))
                 <div class="flex flex-row justify-content-center alert alert-danger">
                     {{ session('access.denied') }}
                 </div>
             @endif
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">FindEasy</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">{{__('ui.subtitle')}}</p>
-            </div>
+            
+              <main class="px-3 w-50">
+                <h1>Cover your page.</h1>
+                <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+                <p class="lead">
+                  <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+                </p>
+              </main>
         </header>
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
