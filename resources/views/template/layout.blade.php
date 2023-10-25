@@ -16,7 +16,7 @@
 
 <body>
     <!-- Navigation-->
-    <x-nav />
+    <x-nav2 />
     {{ $slot }}
     <x-footer />
     <x-copyright />
