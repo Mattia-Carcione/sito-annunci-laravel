@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+<nav class="navbar navbar-expand-lg fixed-top navbar-scroll mt-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homepage') }}">FindEasy</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
@@ -49,12 +49,12 @@
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item d-flex align-items-center">
                             <a class="nav-link position-relative" aria-current="page" href="{{ route('revisor.index') }}"
-                                id="navbar" role="button">{{ __('ui.revisorZone') }}</a>
-                            <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill"
-                                style="background-color: #C5DCDC">
-                                {{ App\Models\Announcement::toBeRevisionedCount() }}
-                                <span class="visually-hidden">Unread Messages</span>
-                            </span>
+                                id="navbar" role="button">{{ __('ui.revisorZone') }}
+                                <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill"
+                                    style="background-color: #C5DCDC">
+                                    {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                    <span class="visually-hidden">Unread Messages</span>
+                                </span>
                             </a>
                         </li>
                     @endif
@@ -86,17 +86,17 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            
+
                             <li>
-                                <x-_locale lang='it' nation='it'/>
+                                <x-_locale lang='it' nation='it' />
                             </li>
 
                             <li>
-                                <x-_locale lang='en' nation='gb'/>
+                                <x-_locale lang='en' nation='gb' />
                             </li>
 
                             <li>
-                                <x-_locale lang='es' nation='es'/>
+                                <x-_locale lang='es' nation='es' />
                             </li>
 
                         </ul>
@@ -106,14 +106,16 @@
             </ul>
             <ul class="navbar-nav d-flex flex-row">
                 <li class="nav-item me-3 me-lg-0">
-                    <form class="d-flex" role="search" action="{{route('announcements.search')}}" method="GET">
-                        <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn" style="background-color: #C5DCDC" type="submit">{{__('ui.search')}}</button>
+                    <form class="d-flex" role="search" action="{{ route('announcements.search') }}" method="GET">
+                        <input class="form-control me-2" name="searched" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn" style="background-color: #C5DCDC"
+                            type="submit">{{ __('ui.search') }}</button>
                     </form>
                 </li>
-                
+
             </ul>
-            
+
         </div>
     </div>
 </nav>

@@ -1,5 +1,5 @@
 /* css dashboard */
-.nav-link-custom:hover,
+/* .nav-link-custom:hover,
 .i-link-custom:hover {
     color: grey !important;
 }
@@ -16,7 +16,7 @@ th {
     text-overflow: ellipsis !important;
 }
 
-/* css navbar */
+/* css navbar 
 .nav-link {
     color: black;
 }
@@ -40,7 +40,7 @@ th {
 
 .auth-link:hover {
     border-bottom: 0.5px solid black;
-}
+} */
 
 /* css section */
 .card-custom {
