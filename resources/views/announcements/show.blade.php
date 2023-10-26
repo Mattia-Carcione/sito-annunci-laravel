@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container mt-5 pt-5 min-vh-100">
-        <h1 class="pt-5 text-center">{{__('ui.detail')}}</h1>
+        <h1 class="pt-5 text-center">{{__('ui.details')}}</h1>
         <hr>
         <div class="row bg-danger">
             <section class="product col-12">
