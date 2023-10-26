@@ -1,18 +1,24 @@
 <x-layout>
-    <main id="page-top">
+    <main id="">
         <!-- Masthead-->
-        <header id="header-home" class="text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center justify-content-center">
+        <header id="intro" class="mask p-0 " style="background-color: rgba(0, 0, 0, 0); z-index:99">
+        
+
+            <div id="header-home" class=" bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center justify-content-center  z-0 " style="height: 100vh">
+            
             @if (session()->has('access.denied'))
                 <div class="flex flex-row justify-content-center alert alert-danger">
                     {{ session('access.denied') }}
                 </div>
             @endif
-            <img src="https://www.logicinbound.com/wp-content/uploads/2018/01/shutterstock_779835055-1080x778.jpg" class="object-fit-cover position-absolute opacity-50" style="width: 100%; height: 100%" alt="">
-              <main class="px-3 w-50 position-absolute">
+            {{-- <img src="https://www.logicinbound.com/wp-content/uploads/2018/01/shutterstock_779835055-1080x778.jpg" class="object-fit-cover position-absolute opacity-50" style="width: 100%; height: 100%" alt=""> --}}
+              <main class="px-3 w-50  z-3" >
                 <h1>FindEasy.com</h1>
                 <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
               </main>
+            </div>
         </header>
+        
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
             <div class="container">

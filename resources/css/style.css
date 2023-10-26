@@ -622,19 +622,19 @@ footer {
   }
   
   @media (max-width: 450px) {
-    #intro {
+    #header-home {
       height: 950px !important;
     }
   }
   
   @media (min-width: 550px) and (max-width: 750px) {
-    #intro {
+    #header-home {
       height: 1100px !important;
     }
   }
   
   @media (min-width: 800px) and (max-width: 990px) {
-    #intro {
+    #header-home {
       height: 600px !important;
     }
   }
@@ -649,3 +649,4 @@ footer {
       font-size: 10rem;
     }
   }
+
