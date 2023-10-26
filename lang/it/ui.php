@@ -21,7 +21,7 @@ return [
     'price' => 'Prezzo',
     'description' => 'Descrizione',
     'details' => 'Dettagli',
-    'date' => 'Pubblicto il: ',
+    'date' => 'Pubblicato il: ',
     'author' => 'Autore',
     'noAnnouncement' => 'Non ci sono annunci',
     'createAnnouncement' => 'Pubblica un\'annuncio',
