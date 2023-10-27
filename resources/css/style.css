@@ -265,6 +265,7 @@ a {
     background: red;
     color: #fff;
     padding: 3px 10px;
+    z-index: 1;
 }
 
 .product-tumb {
@@ -1384,3 +1385,6 @@ Base structure*/
     background-color: #5478F0;
   }
 
+  .body-color-ultimate {
+    background-color: white;
+  }

@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body class="body-color-ultimate">
     
         <nav class="navbar  bg-body-tertiary fixed-top " data-bs-theme="dark"  >
             <div class="container-fluid">

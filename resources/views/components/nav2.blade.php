@@ -1,4 +1,4 @@
-<nav id="intro" class="navbar navbar-expand-lg fixed-top navbar-scroll mt-3">
+<nav id="intro" class="navbar navbar-expand-lg fixed-top navbar-scroll navbar-color-personal">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('homepage') }}">FindEasy</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
