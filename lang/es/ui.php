@@ -2,7 +2,7 @@
 
 return [
     'allAnnouncements'=>'estos son todos los anuncios!'
-    ,'announcements'=>'anuncios',
+    ,'announcements'=>'Anuncios',
     'subtitle' => 'Todo lo que necesites, cuando quieras tu.',
     'categories'=>'Categorias',
     'register' => 'Registrate',
