@@ -2,7 +2,7 @@
 
 return [
     'allAnnouncements'=>'Here \'s all our announcements!'
-    ,'announcements'=>'announcements',
+    ,'announcements'=>'Announcements',
     'subtitle' => 'Everything you need, when you want it.',
     'categories'=>'Categories',
     'register' => 'Register',
