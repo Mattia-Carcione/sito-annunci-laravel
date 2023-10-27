@@ -1,10 +1,10 @@
 <x-layout>
-    <main id="">
+    <main id="" style="">
         <!-- Masthead-->
-        <header id="intro" class="mask p-0 " style="background-color: rgba(0, 0, 0, 0); z-index:99">
+        <header id="intro" class="mask p-0 z-0" style="background-color: rgba(0, 0, 0, 1);">
         
 
-            <div id="header-home" class=" bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center justify-content-center  z-0 " style="height: 100vh">
+            <div id="header-home" class=" bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center justify-content-center  " style="height: 100vh; filter:blur(2px)">
             
             @if (session()->has('access.denied'))
                 <div class="flex flex-row justify-content-center alert alert-danger">
@@ -12,15 +12,16 @@
                 </div>
             @endif
             {{-- <img src="https://www.logicinbound.com/wp-content/uploads/2018/01/shutterstock_779835055-1080x778.jpg" class="object-fit-cover position-absolute opacity-50" style="width: 100%; height: 100%" alt=""> --}}
-              <main class="px-3 w-50  z-3" >
-                <h1>FindEasy.com</h1>
-                <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-              </main>
+              
             </div>
         </header>
+        <div class=" w-50  z-3 position-relative w-75 px-5 text-center mx-auto   " style="filter:none; top:-15%;" >
+            <h1>FindEasy.com</h1>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        </div>
         
         <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio">
+        <section class="page-section portfolio" id="portfolio" >
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{__('ui.announcements')}}</h2>

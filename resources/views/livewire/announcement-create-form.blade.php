@@ -37,7 +37,7 @@
 
             <div class="form-outline mb-4">
                 <label class="form-label" for="">{{__('ui.images')}}</label>
-                <input type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror " wire:model="temporary_images" />
+                <input type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror " wire:model="temporary_images" id="upload{{ $iteration }}" />
                 @error('temporary_images.*')
                     <span class="error text-danger">{{ $message }}</span>
                 @enderror
@@ -53,6 +53,7 @@
                         @foreach ( $images as $key=>$image )
                         <div class="col-6 my-3">
                             {{-- <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}})"></div> --}}
+                            
                             <img src="{{$image->temporaryUrl()}}" alt="" class="img-responsive" style=" background-position: center; background-size: cover;">
                             <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
                         </div>

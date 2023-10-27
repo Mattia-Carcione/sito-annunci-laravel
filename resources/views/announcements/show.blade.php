@@ -1,16 +1,16 @@
 <x-layout>
-    <div class="container mt-5 pt-5 min-vh-100">
+    <div class="container mt-5 pt-5 ">
         <h1 class="pt-5 text-center">{{__('ui.details')}}</h1>
         <hr>
         <div class="row bg-danger">
             <section class="product col-12">
-                <div>
+                <div >
                     <div id="carouselExampleFade" class="carousel slide carousel-fade">
                         @if ($announcement->images)
-                            <div class="carousel-inner d-flex justify-content-center">
+                            <div class="carousel-inner ">
                                 @foreach ($announcement->images as $image)
                                     <div class="carousel-item  @if ($loop->first) active @endif">
-                                        <img src="{{ $image->getUrl(300,300) }}" class="d-block"
+                                        <img src="{{ $image->getUrl(600,400) }}" class="d-block"
                                             alt="...">
                                     </div>
                                 @endforeach

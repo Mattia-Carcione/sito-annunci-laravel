@@ -15,7 +15,7 @@ class AnnouncementCreateForm extends Component
 
     use WithFileUploads;
 
-    public $title, $description, $price, $category, $temporary_images, $images, $announcement = [];
+    public $title, $description, $price, $category, $temporary_images = [], $images = [], $announcement = [], $iteration=0;
     protected $rules = [
         'title' => 'required|min:4',
         'description' => 'required|min:8',
@@ -44,7 +44,7 @@ class AnnouncementCreateForm extends Component
         ])) {
 
             foreach ($this->temporary_images as $image) {
-                $this->images[] = $image;
+                $this->images[]= $image;
             }
         }
     }
@@ -69,6 +69,7 @@ class AnnouncementCreateForm extends Component
                 $newFileName="announcements/{$this->announcement->id}";
                 $newImage=$this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
                 dispatch(new ResizeImage($newImage->path,300,300));
+                dispatch(new ResizeImage($newImage->path,600,400));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
@@ -91,8 +92,10 @@ class AnnouncementCreateForm extends Component
         $this->description = '';
         $this->price = '';
         $this->category = '';
-        $this->images = '';
-        $this->temporary_images = '';
+        $this->images = [];
+        $this->temporary_images = [];
+        $this->iteration++;
+        
     }
 
     protected function updated($propertyName)
