@@ -1,4 +1,9 @@
 <x-layout>
+    @if (session()->has('message'))
+                <div class="flex flex-row justify-content-center alert alert-success" style="padding-top: 85px">
+                    {{session('message') }}
+                </div>
+            @endif
     <section class="py-5">
         <div class="container px-5 my-5">
             <h1 class="fw-bolder text-center pt-5">{{__('ui.explore')}} {{ $category->name }}</h1>

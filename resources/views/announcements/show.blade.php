@@ -1,4 +1,9 @@
 <x-layout>
+    @if (session()->has('message'))
+                <div class="flex flex-row justify-content-center alert alert-success" style="padding-top: 85px">
+                    {{session('message') }}
+                </div>
+            @endif
     <div class="container mt-5 pt-3 ">
         <h1 class="pt-5 text-center">{{__('ui.details')}}</h1>
         <div class="divider-custom">

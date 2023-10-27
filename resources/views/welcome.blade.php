@@ -1,22 +1,33 @@
 <x-layout>
     <main id="" style="">
+        
         <!-- Masthead-->
         <header id="intro" class="mask p-0 z-0" style="background-color: rgba(0, 0, 0, 1);">
         
 
             <div id="header-home" class=" bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center justify-content-center  " style="height: 100vh; filter:blur(2px)">
             
-            @if (session()->has('access.denied'))
-                <div class="flex flex-row justify-content-center alert alert-danger">
-                    {{ session('access.denied') }}
-                </div>
-            @endif
+            
+            
+          
             {{-- <img src="https://www.logicinbound.com/wp-content/uploads/2018/01/shutterstock_779835055-1080x778.jpg" class="object-fit-cover position-absolute opacity-50" style="width: 100%; height: 100%" alt=""> --}}
               
             </div>
         </header>
         <div class=" w-50  z-3 position-relative w-75 px-5 text-center mx-auto   " style="filter:none; top:-20%;" >
-            <h1 class="fw-bolder" style="text-shadow: 1px 1px 4px white">FindEasy.com</h1>
+            @if (session()->has('access.denied'))
+                <div class="flex flex-row justify-content-center alert alert-danger">
+                    {{ session('access.denied') }}
+                </div>
+            @endif
+            @if (session()->has('message'))
+                <div class="flex flex-row justify-content-center alert alert-success">
+                    {{session('message') }}
+                </div>
+            @endif
+            
+            <h1 class="fw-bolder" style="text-shadow: 1px 1px 4px white">
+            FindEasy.com</h1>
             <p class="lead fw-bolder" style="text-shadow: 1px 1px 4px white">{{__('ui.subtitle')}}</p>
         </div>
         
