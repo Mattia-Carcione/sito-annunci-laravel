@@ -15,7 +15,7 @@
               
             </div>
         </header>
-        <div class=" w-50  z-3 position-relative w-75 px-5 text-center mx-auto   " style="filter:none; top:-15%;" >
+        <div class=" w-50  z-3 position-relative w-75 px-5 text-center mx-auto   " style="filter:none; top:-20%;" >
             <h1 class="fw-bolder" style="text-shadow: 1px 1px 4px white">FindEasy.com</h1>
             <p class="lead fw-bolder" style="text-shadow: 1px 1px 4px white">{{__('ui.subtitle')}}</p>
         </div>
@@ -24,7 +24,7 @@
         <section class="page-section portfolio" id="portfolio" >
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" style="color: #2c3e50 !important">{{__('ui.announcements')}}</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary p-0" style="color: #2c3e50 !important ">{{__('ui.announcements')}}</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -32,7 +32,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- annunci -->
-                <div class="container mt-5 pt-5">
+                <div class="container">
 
                     <div class="row justify-content-center mb-3 p-4">
                         @forelse ($announcements as $announcement)

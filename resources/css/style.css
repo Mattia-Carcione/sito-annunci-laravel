@@ -1163,7 +1163,7 @@ Base structure*/
   }
   
   .page-section {
-    padding: 6rem 0;
+    padding: 0,1rem 0;
   }
   .page-section .page-section-heading {
     font-size: 2.25rem;
@@ -1388,3 +1388,20 @@ Base structure*/
   .body-color-ultimate {
     background-color: white;
   }
+
+  .nav-a {
+    border-radius: 30px;
+  }
+
+  .nav-a:hover {
+    background-color: #C5DCDC;
+    border-radius: 30px;
+    transition: 0.2s;
+    color: black !important;
+  }
+
+  .nav-name:hover {
+   color: #C5DCDC;
+  }
+
+  

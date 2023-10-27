@@ -1,7 +1,11 @@
 <x-layout>
-    <div class="container mt-5 pt-5 ">
+    <div class="container mt-5 pt-3 ">
         <h1 class="pt-5 text-center">{{__('ui.details')}}</h1>
-        <hr>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
         <div class="row bg-danger">
             <section class="product col-12">
                 <div >

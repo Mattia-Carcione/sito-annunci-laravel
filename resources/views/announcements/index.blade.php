@@ -1,7 +1,11 @@
 <x-layout>
     <div class="container py-5" style="margin-top: 2%; height:auto" >
         <h1 class="pt-5 text-center">{{__('ui.allAnnouncements')}}</h1>
-        <hr>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
         <div class="row justify-content-center mb-3 p-4">
             @forelse ($announcements as $announcement)
                 <div class="product-card me-2 mt-5" style="width: 95%;">
