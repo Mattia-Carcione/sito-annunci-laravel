@@ -13,7 +13,7 @@
         </div>
         <div class="row justify-content-center mb-3 p-4">
             @forelse ($announcements as $announcement)
-                <div class="product-card me-2 mt-5" style="width: 95%;">
+                <div class="product-card col-12 col-md-4 m-2" style="width: 95%;">
                     @if ($announcement->created_at->diffInHours(now()) <= 24)
                         <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                     @endif
@@ -28,7 +28,7 @@
                         <p>
                             {{ $announcement->description }}
                         </p>
-                        <p class="card-footer my-2">{{__('ui.date')}} {{$announcement->created_at->format('d/m/Y')}} - {{__('ui.author')}} {{$announcement->user->name ?? ''}}</p>
+                        <p class="card-footer my-2">{{__('ui.date')}} {{$announcement->created_at->format('d/m/Y')}}   {{__('ui.author')}} {{$announcement->user->name ?? ''}}</p>
                         <div class="product-bottom-details">
                             <div class="product-price">€{{ $announcement->price }}</div>
                             <div class="product-links">

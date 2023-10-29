@@ -1,5 +1,10 @@
-    <main class="d-flex flex-column justify-content-center align-items-center  mt-5 pt-5">
+    <main class="d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
         <h1 class="py-2">{{__('ui.createAnnouncement')}}</h1>
+        <div class="divider-custom m-0">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
 
         <form class="container" wire:submit.prevent="store">
             @csrf
@@ -13,7 +18,7 @@
 
             <!-- Name input -->
             <div class="form-outline mb-4">
-                <label class="form-label" for="title">Titolo</label>
+                <label class="form-label" for="title">{{__('ui.title')}}</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" wire:model="title"
                     placeholder="Inserisci il titolo" />
                 @error('title')

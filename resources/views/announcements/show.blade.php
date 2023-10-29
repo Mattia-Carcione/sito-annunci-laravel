@@ -49,16 +49,16 @@
                 <div class="product__info col-6 mx-5">
                     <div>
                         <div class="title">
-                            <h3>{{__('ui.title')}}</h3>
+                            <h4 class="fw-bolder">{{__('ui.title')}}</h4 class="fw-bolder">
                             <p>{{ $announcement->title }}</p>
                         </div>
                         <div class="price">
-                            <h3>{{__('ui.price')}}</h3>
+                            <h4 class="fw-bolder">{{__('ui.price')}}</h4 class="fw-bolder">
                             € <span>{{ $announcement->price }}</span>
                         </div>
 
                         <div class="description">
-                            <h3>{{__('ui.description')}}</h3>
+                            <h4 class="fw-bolder">{{__('ui.description')}}</h4 class="fw-bolder">
                             <P>{{ $announcement->description }}</P>
                         </div>
                     </div>

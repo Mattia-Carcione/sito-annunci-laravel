@@ -206,7 +206,7 @@ a {
 .product-card {
     width: 380px;
     position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
+    box-shadow: 2px 2px 7px 2px #dfdfdf;
     /* margin: 50px auto; */
     background: #fafafa;
     transition: 1s all;
@@ -1403,5 +1403,6 @@ Base structure*/
   .nav-name:hover {
    color: #C5DCDC;
   }
+
 
   

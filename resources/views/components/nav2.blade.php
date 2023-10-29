@@ -5,24 +5,24 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
+        <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto" style="flex: 1;">
+                <li class="nav-item px-1">
                     <a class="nav-link nav-a" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-1">
                     <a class="nav-link nav-a" href="{{ route('announcements.index') }}">{{ __('ui.announcements') }}</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-1">
                     <div class="dropdown">
-                        <a class=" dropdown-toggle nav-link nav-a text-light" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class=" dropdown-toggle nav-link nav-a text-light" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             {{ __('ui.categories') }}
                         </a>
 
                         <ul class="dropdown-menu">
                             @foreach ($categories as $category)
-                                <li><a class="dropdown-item nav-a" style=""
+                                <li class="px-1"><a class="dropdown-item nav-a" style=""
                                         href="{{ route('categories.show', compact('category')) }}">{{ $category->name }}</a>
                                 </li>
                             @endforeach
@@ -31,25 +31,26 @@
                     </div>
                 </li>
                 @guest
-                    <li class="nav-item">
+                    <li class="nav-item px-1">
                         <a class="nav-link nav-a" href="{{ route('register') }}">{{ __('ui.register') }}</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item px-1">
                         <a class="nav-link nav-a" href="{{ route('login') }}">Login</a>
                     </li>
                 @endguest
 
                 @auth
 
-                    <li class="nav-item ">
+                    <li class="nav-item px-1">
                         <a class="nav-link nav-a"
                             href="{{ route('announcements.create') }}">{{ __('ui.createAnnouncement') }}</a>
                     </li>
 
                     @if (Auth::user()->is_revisor)
-                        <li class="nav-item d-flex align-items-center">
-                            <a class="nav-link position-relative nav-a" aria-current="page" href="{{ route('revisor.index') }}"
-                                id="navbar" role="button">{{ __('ui.revisorZone') }}
+                        <li class="nav-item d-flex align-items-center px-1">
+                            <a class="nav-link position-relative nav-a" aria-current="page"
+                                href="{{ route('revisor.index') }}" id="navbar"
+                                role="button">{{ __('ui.revisorZone') }}
                                 <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill"
                                     style="background-color: #C5DCDC">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
@@ -58,7 +59,7 @@
                             </a>
                         </li>
                     @endif
-
+                <div class="d-flex align-items-center justify-content-end" style="flex: 1; padding-right: 1rem ">
                     <li class="nav-item d-flex align-items-center dropdown">
                         <a class="nav-link dropdown-toggle nav-a text-light" href="#" id="#" role="button"
                             data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
@@ -75,47 +76,35 @@
                             </form>
                         </ul>
                     </li>
-                @endauth
+                    @endauth
 
-                <li class="nav-item">
+                    <li class="nav-item">
 
-                    <div class="dropdown">
-                        <a class=" dropdown-toggle nav-link nav-a text-light" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            {{ __('ui.language') }}
-                        </a>
-
-                        <ul class="dropdown-menu">
-
-                            <li class=" nav-a">
-                                <x-_locale lang='it' nation='it' />
-                            </li>
-
-                            <li class=" nav-a">
-                                <x-_locale lang='en' nation='gb' />
-                            </li>
-
-                            <li class=" nav-a">
-                                <x-_locale lang='es' nation='es' />
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
-
+                        <div class="dropdown">
+                            <a class=" dropdown-toggle nav-link nav-a text-light" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                {{ __('ui.language') }}
+                            </a>
+    
+                            <ul class="dropdown-menu">
+    
+                                <li class=" nav-a">
+                                    <x-_locale lang='it' nation='it' />
+                                </li>
+    
+                                <li class=" nav-a">
+                                    <x-_locale lang='en' nation='gb' />
+                                </li>
+    
+                                <li class=" nav-a">
+                                    <x-_locale lang='es' nation='es' />
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </li>
+                </div>
             </ul>
-            <ul class="navbar-nav d-flex flex-row">
-                <li class="nav-item me-3 me-lg-0">
-                    <form class="d-flex" role="search" action="{{ route('announcements.search') }}" method="GET">
-                        <input class="form-control me-2" name="searched" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button class="btn" style="background-color: #C5DCDC"
-                            type="submit">{{ __('ui.search') }}</button>
-                    </form>
-                </li>
-
-            </ul>
-
         </div>
     </div>
 </nav>

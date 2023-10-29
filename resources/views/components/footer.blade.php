@@ -1,4 +1,4 @@
-<footer class="footer text-center"">
+<footer class="footer text-center">
     <div class="container">
         <div class="row">
             <!-- Footer Location-->
@@ -24,7 +24,7 @@
             <!-- Footer About Text-->
             <div class="col-lg-4">
                 <h4 class="text-uppercase mb-4">{{__('ui.revisor')}}</h4>
-                <p class="lead mb-0">
+                <p class="lead mb-2">
                     {{__('ui.workWithUs')}}<br>
                 </p>
                 <p>

@@ -22,7 +22,7 @@ return [
     'description' => 'Descripcion',
     'details' => 'Detalles',
     'date' => 'Publicado el: ',
-    'author' => 'Autor',
+    'author' => 'Autor:',
     'noAnnouncement' => 'No hay anuncios',
     'createAnnouncement' => 'Publica un anuncio',
     'category' => 'Categoria',

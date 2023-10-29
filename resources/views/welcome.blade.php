@@ -1,20 +1,33 @@
 <x-layout>
-    <main id="" style="">
-        
+    <main>
+
         <!-- Masthead-->
         <header id="intro" class="mask p-0 z-0" style="background-color: rgba(0, 0, 0, 1);">
-        
 
-            <div id="header-home" class=" bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center justify-content-center  " style="height: 100vh; filter:blur(2px)">
-            
-            
-            
-          
-            {{-- <img src="https://www.logicinbound.com/wp-content/uploads/2018/01/shutterstock_779835055-1080x778.jpg" class="object-fit-cover position-absolute opacity-50" style="width: 100%; height: 100%" alt=""> --}}
-              
+
+            <div id="header-home"
+                class=" bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center"
+                style="height: 100vh; filter:blur(2px)">
+                <div class="pt-5 d-flex justify-content-center d-block">
+                    <ul class="d-flex flex-row pt-5">
+                        <li class="me-3 me-lg-0">
+                            <form class="d-flex" role="search" action="{{ route('announcements.search') }}"
+                                method="GET">
+                                <input class="form-control me-2" style="width: 400px; border-radius:20px;" name="searched" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn" style="background-color: #C5DCDC"
+                                    type="submit">{{ __('ui.search') }}</button>
+                            </form>
+                        </li>
+
+                    </ul>
+                </div>
+
+                {{-- <img src="https://www.logicinbound.com/wp-content/uploads/2018/01/shutterstock_779835055-1080x778.jpg" class="object-fit-cover position-absolute opacity-50" style="width: 100%; height: 100%" alt=""> --}}
+
             </div>
         </header>
-        <div class=" w-50  z-3 position-relative w-75 px-5 text-center mx-auto   " style="filter:none; top:-20%;" >
+        <div class="w-50 position-relative w-75 px-5 text-center mx-auto" style="filter:none; top:-25%;">
             @if (session()->has('access.denied'))
                 <div class="flex flex-row justify-content-center alert alert-danger">
                     {{ session('access.denied') }}
@@ -22,20 +35,21 @@
             @endif
             @if (session()->has('message'))
                 <div class="flex flex-row justify-content-center alert alert-success">
-                    {{session('message') }}
+                    {{ session('message') }}
                 </div>
             @endif
-            
+
             <h1 class="fw-bolder" style="text-shadow: 1px 1px 4px white">
-            FindEasy.com</h1>
-            <p class="lead fw-bolder" style="text-shadow: 1px 1px 4px white">{{__('ui.subtitle')}}</p>
+                FindEasy.com</h1>
+            <p class="lead fw-bolder" style="text-shadow: 1px 1px 4px white">{{ __('ui.subtitle') }}</p>
         </div>
-        
+
         <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio" >
+        <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary p-0" style="color: #2c3e50 !important ">{{__('ui.announcements')}}</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary p-0"
+                    style="color: #2c3e50 !important ">{{ __('ui.announcements') }}</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -52,7 +66,7 @@
                                     <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                                 @endif
 
-                                <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : "https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg"}}"
+                                <img src="{{ !$announcement->images()->get()->isEmpty()? $announcement->images()->first()->getUrl(300, 300): 'https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg' }}"
                                     alt="" class="img-fluid">
                                 <div class="product-details">
                                     <span class="product-catagory">{{ $announcement->category->name }}</span>
@@ -62,6 +76,7 @@
                                     <p>
                                         {{ $announcement->description }}
                                     </p>
+                                    <p class="card-footer my-2">{{__('ui.date')}} {{$announcement->created_at->format('d/m/Y')}}    {{__('ui.author')}} {{$announcement->user->name ?? ''}}</p>
                                     <div class="product-bottom-details">
                                         <div class="product-price">€{{ $announcement->price }}</div>
                                         <div class="product-links">
@@ -337,7 +352,8 @@
                                                 <div class="portfolio-item-caption-content text-center text-white"><i
                                                         class="fas fa-plus fa-3x"></i></div>
                                             </div>
-                                            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
+                                            <img class="img-fluid" src="assets/img/portfolio/game.png"
+                                                alt="..." />
                                         </div>
                                     </div>
                                     <!-- Portfolio Item 5-->
