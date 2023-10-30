@@ -31,6 +31,31 @@
                     </div>
                 </li>
 
+                <li class="nav-item">
+
+                    <div class="dropdown">
+                        <a class=" dropdown-toggle nav-link nav-a text-light" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ __('ui.language') }}
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li class=" nav-a d-flex align-items-center">
+                                <x-_locale lang='it' nation='it' text='Italiano' />
+                            </li>
+
+                            <li class=" nav-a d-flex align-items-center">
+                                <x-_locale lang='en' nation='gb' text='English' />
+                            </li>
+
+                            <li class=" nav-a d-flex align-items-center">
+                                <x-_locale lang='es' nation='es' text='Español' />
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
                 @auth
 
                     <li class="nav-item px-1">
@@ -51,7 +76,9 @@
                             </a>
                         </li>
                     @endif
-                    <div class="d-flex align-items-center justify-content-end" style="flex: 1; padding-right: 1rem ">
+                </ul>
+                <div class="d-flex justify-content-end align-items-center">
+                    <ul class="navbar-nav me-auto" style="padding-right: 2.5rem">
                         <li class="nav-item d-flex align-items-center dropdown">
                             <a class="nav-link dropdown-toggle nav-a text-light" href="#" id="#"
                                 role="button" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
@@ -68,47 +95,22 @@
                                 </form>
                             </ul>
                         </li>
-                    @endauth
-
-                    <li class="nav-item">
-
-                        <div class="dropdown">
-                            <a class=" dropdown-toggle nav-link nav-a text-light" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ __('ui.language') }}
-                            </a>
-
-                            <ul class="dropdown-menu">
-
-                                <li class=" nav-a d-flex align-items-center">
-                                    <x-_locale lang='it' nation='it' text='Italiano'/>
-                                </li>
-
-                                <li class=" nav-a d-flex align-items-center">
-                                    <x-_locale lang='en' nation='gb' text='English' />
-                                </li>
-
-                                <li class=" nav-a d-flex align-items-center">
-                                    <x-_locale lang='es' nation='es' text='Español' />
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
+                    </ul>
                 </div>
-                @guest
-                    <div class="align-items-center justify-content-end" style="flex: 1; padding-right: 1rem ">
-                        <ul class="navbar-nav me-auto justify-content-end d-flex">
-                            <li class="nav-item  d-flex px-1">
-                                <a class="nav-link nav-a text-light"
-                                    href="{{ route('register') }}">{{ __('ui.register') }}</a>
-                            </li>
-                            <li class="nav-item  d-flex px-1">
-                                <a class="nav-link nav-a text-light" href="{{ route('login') }}">Login</a>
-                            </li>
-                        </ul>
-                    </div>
-                @endguest
+            @endauth
+            @guest
+                <div class="align-items-center justify-content-end" style="flex: 1; padding-right: 1rem ">
+                    <ul class="navbar-nav me-auto justify-content-end d-flex">
+                        <li class="nav-item  d-flex px-1">
+                            <a class="nav-link nav-a text-light"
+                                href="{{ route('register') }}">{{ __('ui.register') }}</a>
+                        </li>
+                        <li class="nav-item  d-flex px-1">
+                            <a class="nav-link nav-a text-light" href="{{ route('login') }}">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            @endguest
             </ul>
         </div>
     </div>
