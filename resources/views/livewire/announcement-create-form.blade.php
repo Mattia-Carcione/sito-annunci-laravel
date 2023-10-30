@@ -93,7 +93,7 @@
 
 
             <!-- Submit button -->
-            <button type="submit" style="background-color: #C5DCDC" class="btn btn-block mb-4"><i class="fa-solid fa-circle-plus"></i>
+            <button type="submit" class="button btn btn-block mb-4"><i class="fa-solid fa-circle-plus"></i>
                 {{__('ui.create')}}</button>
         </form>
     </main>

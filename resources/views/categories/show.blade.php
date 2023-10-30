@@ -48,7 +48,7 @@
                     <div>
                         <h4 class="text-center pt-2">{{__('ui.noAnnouncements')}}</h4>
                         <h4 class="text-center pt-3">{{__('ui.announcementCreate')}}<br>
-                            <a href="{{ route('announcements.create') }}" class="btn mt-3" style="background-color: #C5DCDC">{{__('ui.publish')}}</a>
+                            <a href="{{ route('announcements.create') }}" class="button btn mt-3">{{__('ui.publish')}}</a>
                         </h4>
                     </div>
                 @endforelse

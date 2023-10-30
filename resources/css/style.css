@@ -1415,6 +1415,12 @@ Base structure*/
    color: #C5DCDC;
   }
 
+  .button {
+    color: black !important;
+    padding: 12px 30px;
+    border-radius: 50px;
+    background: #C5DCDC !important;
+  }
 
 
   

@@ -1,7 +1,7 @@
 <x-dashboard>
     <div class="container mt-5 ">
         <div class="align-middle gap-2 d-flex justify-content-between">
-            <h3>Elenco Annunci Revisionati</h3>
+            <h2>Elenco Annunci Revisionati</h2>
         </div>
             <div class="table-responsive">
                 <table class="table border mt-2">
