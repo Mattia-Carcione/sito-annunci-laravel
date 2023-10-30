@@ -121,9 +121,10 @@
                     <p class="text-600">€{{ $announcement->price }}</p>
 
                     <h6 class="mt-4 fw-bold">{{ __('ui.description') }}:</h6>
-                    <p class="text-600">{{ $announcement->description }}</p>
+                    <p class="text-600 description-overflow descrizione" id="descrizione">{{ $announcement->description }}</p>
+                    <button class="btn btn-sm btn-dark btn-hidden" id="mostraDescrizione">{{ __('ui.showMore') }}</button>
 
-                    <h6 class="mt-4 fw-bold">Aggiunto il:</h6>
+                    <h6 class="mt-4 fw-bold">{{ __('ui.date') }}</h6>
                     <p class="text-600">{{ $announcement->created_at->format('d/m/Y') }}</p>
                     <div class="d-grid mt-4"><a class="btn btn-dark"
                             href="{{ route('categories.show', $announcement->category) }}">{{ __('ui.correlatedArticle') }}</a>

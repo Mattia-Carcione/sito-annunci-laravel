@@ -28,9 +28,11 @@
                             <h4><a style="color: #5478F0"
                                     href="{{ route('announcements.show', $announcement) }}">{{ $announcement->title }}</a>
                             </h4>
-                            <p>
+                            <p class="description-overflow descrizione" id="descrizione">
                                 {{ $announcement->description }}
                             </p>
+                            <span href="" class="btn-hidden">{{__('ui.showMore')}}</span>
+                           
                             <p class="card-footer my-2">{{__('ui.date')}} {{$announcement->created_at->format('d/m/Y')}}   {{__('ui.author')}} {{$announcement->user->name ?? ''}}</p>
                             <div class="product-bottom-details">
                                 <div class="product-price">€{{ $announcement->price }}</div>

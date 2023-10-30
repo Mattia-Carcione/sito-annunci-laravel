@@ -40,4 +40,7 @@ return [
     'confirmPassword' => 'Conferma la password',
     'correlatedArticle' => 'Articoli correlati',
     'quantity' => 'Quantità',
+    'date' => 'Pubblicato il: ',
+    'showMore' => 'Mostra',
+    'Hidden' => 'Nascondi',
 ];

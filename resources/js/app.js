@@ -9,6 +9,21 @@ import 'bootstrap';
 // Scripts
 // 
 
+let myButtons = document.getElementsByClassName("btn-hidden");
+
+for (let i = 0; i < myButtons.length; i++) {
+    myButtons[i].addEventListener("click", function () {
+        let myDiv = this.parentElement.querySelector(".descrizione");
+        if (myDiv.classList.contains("description-overflow")) {
+            myDiv.classList.remove("description-overflow");
+            this.innerHTML = "Nascondi";
+        } else {
+            myDiv.classList.add("description-overflow");
+            this.innerHTML = "Mostra";
+        }
+    });
+}
+
 
 
 

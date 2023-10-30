@@ -40,4 +40,7 @@ return [
     'confirmPassword' => 'Confirm password',
     'correlatedArticle' => 'Correlated articles',
     'quantity' => 'Quantity',
+    'date' => 'Published on: ',
+    'showMore' => 'Show more',
+    'Hidden' => 'Hide',
 ];
