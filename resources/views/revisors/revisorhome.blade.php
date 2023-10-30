@@ -50,7 +50,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product__info col-6 mx-5">
+                <div class="row" style="flex-wrap:nowrap">
+                    <div class="product__info col-6 mx-5 " style="margin-right: 0px !important">
                         <div>
                             <div class="title">
                                 <h3>Titolo</h3>
@@ -79,6 +80,24 @@
                             <button type="submit" class="btn btn-danger">Rifiuta</button>
                         </form>
                     </div>
+                    <div class="col-md-6 p-0">
+                    
+                        <div class="card-body">
+                            <h5 class="tc-accent">Revisioni Immagini</h5>
+                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                            <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                            <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                            <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                            <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                            <h5>Tags</h5>
+                            <p>@foreach ( $image->labels as $label ){{$label}}  @endforeach
+                                
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
                 </section>
             </div>
 

@@ -15,6 +15,8 @@ class Image extends Model
         'path'
     ];
 
+    protected $casts = ['labels'=>'array'];
+
     public function announcement()
     {
 
