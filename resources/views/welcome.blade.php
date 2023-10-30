@@ -59,7 +59,7 @@
 
                     <div class="row justify-content-center mb-3 p-4">
                         @forelse ($announcements as $announcement)
-                            <div class="product-card col-12 col-md-4 m-2">
+                            <div class="product-card col-12 col-md-4 m-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                 @if ($announcement->created_at->diffInHours(now()) <= 24)
                                     <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                                 @endif
