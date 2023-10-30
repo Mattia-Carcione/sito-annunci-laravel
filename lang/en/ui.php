@@ -38,4 +38,6 @@ return [
     'registerToYourAccount' => 'Register to your account',
     'name' => 'Name',
     'confirmPassword' => 'Confirm password',
+    'correlatedArticle' => 'Correlated articles',
+    'quantity' => 'Quantity',
 ];
