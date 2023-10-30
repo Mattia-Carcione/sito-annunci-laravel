@@ -126,7 +126,7 @@
 
                     <h6 class="mt-4 fw-bold">{{ __('ui.date') }}</h6>
                     <p class="text-600">{{ $announcement->created_at->format('d/m/Y') }}</p>
-                    <div class="d-grid mt-4"><a class="btn btn-dark"
+                    <div class="d-grid mt-4"><a class="btn btn-dark" style="background-color: #C5DCDC"
                             href="{{ route('categories.show', $announcement->category) }}">{{ __('ui.correlatedArticle') }}</a>
                     </div>
                 </div>
