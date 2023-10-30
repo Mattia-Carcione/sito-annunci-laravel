@@ -35,7 +35,7 @@
                         </div>
                     @endif
 
-                    <h1 class="fw-bolder" style="text-shadow: 1px 1px 4px white">
+                    <h1 class="fw-bolder" style="text-shadow: 1px 1px 4px white; margin-top:170px">
                         FindEasy.com</h1>
                     <p class="lead fw-bolder" style="text-shadow: 1px 1px 4px white">{{ __('ui.subtitle') }}</p>
                 </div>
