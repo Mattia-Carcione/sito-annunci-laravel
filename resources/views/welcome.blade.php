@@ -7,14 +7,14 @@
 
             <div id="header-home"
                 class="bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center"
-                style="height: 100vh;">
+                style="height: 100vh; background-repeat:no-repeat; background-size:cover">
                 <div class="pt-5 d-flex justify-content-center d-block">
-                    <ul class="d-flex flex-row pt-5">
+                    <ul class="d-flex flex-row pt-5" style="list-style-type:none">
                         <li class="me-3 me-lg-0">
                             <form class="d-flex" role="search" action="{{ route('announcements.search') }}"
                                 method="GET">
-                                <input class="form-control me-2" style="width: 400px; border-radius:20px;" name="searched" type="search" placeholder="Search"
-                                    aria-label="Search">
+                                <input class="form-control me-2" style="width: 400px; border-radius:20px;"
+                                    name="searched" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn" style="background-color: #C5DCDC"
                                     type="submit">{{ __('ui.search') }}</button>
                             </form>
@@ -22,33 +22,31 @@
 
                     </ul>
                 </div>
-
                 {{-- <img src="https://www.logicinbound.com/wp-content/uploads/2018/01/shutterstock_779835055-1080x778.jpg" class="object-fit-cover position-absolute opacity-50" style="width: 100%; height: 100%" alt=""> --}}
+                <div class="w-50 w-75 px-5 text-center mx-auto" style="filter:none; top:-25%;">
+                    @if (session()->has('access.denied'))
+                        <div class="flex flex-row justify-content-center alert alert-danger">
+                            {{ session('access.denied') }}
+                        </div>
+                    @endif
+                    @if (session()->has('message'))
+                        <div class="flex flex-row justify-content-center alert alert-success">
+                            {{ session('message') }}
+                        </div>
+                    @endif
+
+                    <h1 class="fw-bolder" style="text-shadow: 1px 1px 4px white">
+                        FindEasy.com</h1>
+                    <p class="lead fw-bolder" style="text-shadow: 1px 1px 4px white">{{ __('ui.subtitle') }}</p>
+                </div>
 
             </div>
         </header>
-        <div class="w-50 position-relative w-75 px-5 text-center mx-auto" style="filter:none; top:-25%;">
-            @if (session()->has('access.denied'))
-                <div class="flex flex-row justify-content-center alert alert-danger">
-                    {{ session('access.denied') }}
-                </div>
-            @endif
-            @if (session()->has('message'))
-                <div class="flex flex-row justify-content-center alert alert-success">
-                    {{ session('message') }}
-                </div>
-            @endif
-
-            <h1 class="fw-bolder" style="text-shadow: 1px 1px 4px white">
-                FindEasy.com</h1>
-            <p class="lead fw-bolder" style="text-shadow: 1px 1px 4px white">{{ __('ui.subtitle') }}</p>
-        </div>
-
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary p-0"
+                <h2 class="page-section-heading text-center text-uppercase text-secondary p-0 mt-5"
                     style="color: #2c3e50 !important ">{{ __('ui.announcements') }}</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
@@ -61,7 +59,7 @@
 
                     <div class="row justify-content-center mb-3 p-4">
                         @forelse ($announcements as $announcement)
-                            <div class="product-card col-12 col-md-4 m-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                            <div class="product-card col-12 col-md-4 m-2">
                                 @if ($announcement->created_at->diffInHours(now()) <= 24)
                                     <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                                 @endif
@@ -76,8 +74,10 @@
                                     <p class="description-overflow descrizione" id="descrizione">
                                         {{ $announcement->description }}
                                     </p>
-                                    <span href="" class="btn-hidden">{{__('ui.showMore')}}</span>
-                                    <p class="card-footer my-2">{{__('ui.date')}} {{$announcement->created_at->format('d/m/Y')}}    {{__('ui.author')}} {{$announcement->user->name ?? ''}}</p>
+                                    <span href="" class="btn-hidden">{{ __('ui.showMore') }}</span>
+                                    <p class="card-footer my-2">{{ __('ui.date') }}
+                                        {{ $announcement->created_at->format('d/m/Y') }} {{ __('ui.author') }}
+                                        {{ $announcement->user->name ?? '' }}</p>
                                     <div class="product-bottom-details">
                                         <div class="product-price">€{{ $announcement->price }}</div>
                                         <div class="product-links">
