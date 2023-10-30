@@ -6,8 +6,8 @@
 
 
             <div id="header-home"
-                class=" bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center"
-                style="height: 100vh; filter:blur(2px)">
+                class="bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center"
+                style="height: 100vh;">
                 <div class="pt-5 d-flex justify-content-center d-block">
                     <ul class="d-flex flex-row pt-5">
                         <li class="me-3 me-lg-0">
