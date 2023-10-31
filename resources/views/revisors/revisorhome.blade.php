@@ -90,9 +90,7 @@
                             <p>Violenza: <span class="{{$image->violence}}"></span></p>
                             <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
                             <h5>Tags</h5>
-                            <p>@foreach ( $image->labels as $label ){{$label}}  @endforeach
-                                
-                            </p>
+                            <p>@foreach ( $image->labels as $label ){{$label}}  @endforeach</p>
                         </div>
 
 
