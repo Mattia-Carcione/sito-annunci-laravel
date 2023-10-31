@@ -67,7 +67,6 @@ class RemoveFaces implements ShouldQueue
             ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
             ->watermarkFit(Manipulations::FIT_STRETCH);
 
-
             $image->save($srcPath);
 
 
