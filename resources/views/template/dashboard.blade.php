@@ -16,9 +16,9 @@
 
 </head>
 
-<body class="body-color-ultimate">
+<body>
     
-        <nav class="navbar  bg-body-tertiary fixed-top " data-bs-theme="dark"  >
+        <nav class="navbar bg-body-tertiary fixed-top" data-bs-theme="dark"  >
             <div class="container-fluid">
               <span class="navbar-brand" ><a href="{{route('homepage')}}" class="navbar-brand">FindEasy</a>REVISOR</span>
               <button class="navbar-toggler position-relative m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -66,7 +66,8 @@
             </div>
           </nav>
 
-    <main style="margin-top: 70px">
+    <main style="margin-top: 70px; padding-top: 30px">
+
             {{ $slot }}
 
     </main>

@@ -12,8 +12,8 @@
 
     @if ($announcements)
         <h1 class="text-center">Ecco l'annuncio da revisionare</h1>
-        <div class="container mt-5 pt-5 min-vh-100">
-            <div class="row bg-danger">
+        <div class="container mt-5">
+            <div class="row">
                 <section class="product col-12">
                     <div>
                         <div class="controls">
@@ -54,16 +54,16 @@
                     <div class="product__info col-6 mx-5 " style="margin-right: 0px !important">
                         <div>
                             <div class="title">
-                                <h3>Titolo</h3>
+                                <h4 class="fw-bolder">Titolo</h4>
                                 <p>{{ $announcements->title }}</p>
                             </div>
                             <div class="price">
-                                <h3>Prezzo</h3>
+                                <h4 class="fw-bolder">Prezzo</h4>
                                 € <span>{{ $announcements->price }}</span>
                             </div>
 
                             <div class="description">
-                                <h3>Descrizione</h3>
+                                <h4 class="fw-bolder">Descrizione</h4>
                                 <P>{{ $announcements->description }}</P>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                     <div class="col-md-6 p-0">
                     
                         <div class="card-body">
-                            <h5 class="tc-accent">Revisioni Immagini</h5>
+                            <h4 class="tc-accent">Revisioni Immagini</h4>
                             <p>Adulti: <span class="{{$image->adult}}"></span></p>
                             <p>Satira: <span class="{{$image->spoof}}"></span></p>
                             <p>Medicina: <span class="{{$image->medical}}"></span></p>

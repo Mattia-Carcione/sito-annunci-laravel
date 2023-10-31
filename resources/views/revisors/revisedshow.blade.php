@@ -51,16 +51,16 @@
                 <div class="product__info col-6 mx-5">
                     <div>
                         <div class="title">
-                            <h4>Titolo</h4>
+                            <h4 class="fw-bolder">Titolo</h4>
                             <p>{{ $announcement->title }}</p>
                         </div>
                         <div class="price">
-                            <h4>Prezzo</h4>
+                            <h4 class="fw-bolder">Prezzo</h4>
                             € <span>{{ $announcement->price }}</span>
                         </div>
 
                         <div class="description">
-                            <h4>Descrizione</h4>
+                            <h4 class="fw-bolder">Descrizione</h4>
                             <P>{{ $announcement->description }}</P>
                         </div>
                     </div>
