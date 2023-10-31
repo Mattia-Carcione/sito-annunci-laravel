@@ -15,7 +15,7 @@
                                 method="GET">
                                 <input class="form-control me-2" style="width: 400px; border-radius:20px;"
                                     name="searched" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn" style="background-color: #C5DCDC"
+                                <button class="button btn btn-hover"
                                     type="submit">{{ __('ui.search') }}</button>
                             </form>
                         </li>
@@ -35,7 +35,7 @@
                         </div>
                     @endif
 
-                    <h1 class="fw-bolder" style="text-shadow: 1px 1px 4px white; margin-top:170px">
+                    <h1 class="titolo font fw-bolder" style="text-shadow: 1px 1px 4px white; margin-top:170px">
                         FindEasy.com</h1>
                     <p class="lead fw-bolder" style="text-shadow: 1px 1px 4px white">{{ __('ui.subtitle') }}</p>
                 </div>
@@ -68,7 +68,7 @@
                                     alt="" class="img-fluid">
                                 <div class="product-details">
                                     <span class="product-catagory">{{ $announcement->category->name }}</span>
-                                    <h4><a style="color: #5478F0"
+                                    <h4><a class="stretched-link" style="color: #5478F0"
                                             href="{{ route('announcements.show', $announcement) }}">{{ $announcement->title }}</a>
                                     </h4>
                                     <p class="description-overflow descrizione" id="descrizione">
