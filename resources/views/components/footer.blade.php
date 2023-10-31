@@ -28,7 +28,7 @@
                     {{__('ui.workWithUs')}}<br>
                 </p>
                 <p>
-                    <a class="button btn text-dark" style="background-color: #C5DCDC" href="{{ route('become.revisor') }}">
+                    <a class="button btn btn-hover text-dark" style="background-color: #C5DCDC" href="{{ route('become.revisor') }}">
                         {{__('ui.here')}}</a>
                 </p>
 

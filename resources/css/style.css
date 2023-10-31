@@ -1422,5 +1422,15 @@ Base structure*/
     background: #C5DCDC !important;
   }
 
+  .btn-hover:hover {
+    background-color: #83C5BE !important;
+  }
 
+  .titolo {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font {
+    font-size: 80px;
+  }
   

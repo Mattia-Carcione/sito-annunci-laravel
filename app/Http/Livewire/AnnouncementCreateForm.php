@@ -86,7 +86,7 @@ class AnnouncementCreateForm extends Component
         $this->announcement->user()->associate(Auth::user());
         $this->announcement->save();
 
-        session()->flash('message', 'Annuncio inserito con successo');
+        session()->flash('message', 'Annuncio inserito con successo, verrà pubblicato una volta revisionato');
         $this->clearForm();
     }
 

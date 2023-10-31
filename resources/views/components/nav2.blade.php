@@ -1,6 +1,6 @@
 <nav id="intro" class="navbar navbar-expand-lg fixed-top navbar-scroll navbar-color-personal">
     <div class="container-fluid">
-        <a class="navbar-brand nav-name" href="{{ route('homepage') }}">FindEasy</a>
+        <a class="titolo navbar-brand nav-name" href="{{ route('homepage') }}">FindEasy</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>

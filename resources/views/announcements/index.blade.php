@@ -22,7 +22,7 @@
                         alt="" class="img-fluid">
                     <div class="product-details">
                         <span class="product-catagory">{{ $announcement->category->name }}</span>
-                        <h4><a style="color: #5478F0"
+                        <h4><a class="stretched-link" style="color: #5478F0"
                                 href="{{ route('announcements.show', $announcement) }}">{{ $announcement->title }}</a>
                         </h4>
                         <p class="description-overflow descrizione" id="descrizione">

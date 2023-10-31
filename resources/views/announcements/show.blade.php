@@ -122,11 +122,11 @@
 
                     <h6 class="mt-4 fw-bold">{{ __('ui.description') }}:</h6>
                     <p class="text-600 description-overflow descrizione" id="descrizione">{{ $announcement->description }}</p>
-                    <button class="button btn btn-sm btn-hidden" id="mostraDescrizione">{{ __('ui.showMore') }}</button>
+                    <button class="button btn btn-hover btn-sm btn-hidden" id="mostraDescrizione">{{ __('ui.showMore') }}</button>
 
                     <h6 class="mt-4 fw-bold">{{ __('ui.date') }}</h6>
                     <p class="text-600">{{ $announcement->created_at->format('d/m/Y') }}</p>
-                    <div class="d-grid mt-4"><a class="button btn" href="{{ route('categories.show', $announcement->category) }}">{{ __('ui.correlatedArticle') }}</a>
+                    <div class="d-grid mt-4"><a class="button btn btn-hover" href="{{ route('categories.show', $announcement->category) }}">{{ __('ui.correlatedArticle') }}</a>
                     </div>
                 </div>
             </div>
