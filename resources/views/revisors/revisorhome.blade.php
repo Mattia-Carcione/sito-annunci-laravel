@@ -22,8 +22,13 @@
                                     <div class="carousel-inner">
                                         @foreach ($announcements->images as $image)
                                             <div class="carousel-item @if ($loop->first) active @endif">
-                                                <img src="{{ $image->getUrl(600,400) }}" class="d-block w-100"
-                                                    alt="...">
+                                                @if ($image->labels == null)
+                                                    <p>Le immagini non sono state ancora elaborate, ricarica la pagina
+                                                    </p>
+                                                @else
+                                                    <img src="{{ $image->getUrl(600, 400) }}" class="d-block w-100"
+                                                        alt="...">
+                                                @endif
                                             </div>
                                         @endforeach
                                     </div>
@@ -50,52 +55,61 @@
                             </div>
                         </div>
                     </div>
-                <div class="row" style="flex-wrap:nowrap">
-                    <div class="product__info col-6 mx-5 " style="margin-right: 0px !important">
-                        <div>
-                            <div class="title">
-                                <h4 class="fw-bolder">Titolo</h4>
-                                <p>{{ $announcements->title }}</p>
-                            </div>
-                            <div class="price">
-                                <h4 class="fw-bolder">Prezzo</h4>
-                                € <span>{{ $announcements->price }}</span>
-                            </div>
+                    <div class="row" style="flex-wrap:nowrap">
+                        <div class="product__info col-6 mx-5 " style="margin-right: 0px !important">
+                            <div>
+                                <div class="title">
+                                    <h4 class="fw-bolder">Titolo</h4>
+                                    <p>{{ $announcements->title }}</p>
+                                </div>
+                                <div class="price">
+                                    <h4 class="fw-bolder">Prezzo</h4>
+                                    € <span>{{ $announcements->price }}</span>
+                                </div>
 
-                            <div class="description">
-                                <h4 class="fw-bolder">Descrizione</h4>
-                                <P>{{ $announcements->description }}</P>
+                                <div class="description">
+                                    <h4 class="fw-bolder">Descrizione</h4>
+                                    <P>{{ $announcements->description }}</P>
+                                </div>
                             </div>
+                            <form
+                                action="{{ route('revisor.accept_announcement', ['announcement' => $announcements]) }}"
+                                style="display:inline" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="btn btn-success">Accetta</button>
+                            </form>
+                            <form
+                                action="{{ route('revisor.reject_announcement', ['announcement' => $announcements]) }}"
+                                style="display:inline" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="btn btn-danger">Rifiuta</button>
+                            </form>
                         </div>
-                        <form action="{{ route('revisor.accept_announcement', ['announcement' => $announcements]) }}"
-                            style="display:inline" method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <button type="submit" class="btn btn-success">Accetta</button>
-                        </form>
-                        <form action="{{ route('revisor.reject_announcement', ['announcement' => $announcements]) }}"
-                            style="display:inline" method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <button type="submit" class="btn btn-danger">Rifiuta</button>
-                        </form>
-                    </div>
-                    <div class="col-md-6 p-0">
-                    
-                        <div class="card-body">
-                            <h4 class="tc-accent">Revisioni Immagini</h4>
-                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                            <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                            <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                            <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                            <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
-                            <h5>Tags</h5>
-                            <p>@foreach ( $image->labels as $label ){{$label}}  @endforeach</p>
+                        <div class="col-md-6 p-0">
+
+                            <div class="card-body">
+                                <h4 class="tc-accent">Revisioni Immagini</h4>
+                                <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+                                <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+                                <p>Contenuto Ammiccante: <span class="{{ $image->racy }}"></span></p>
+                                <h5>Tags</h5>
+                                @if (!($image->labels == null))
+                                    <p>
+                                        @foreach ($image->labels as $label)
+                                            {{ $label }}
+                                        @endforeach
+                                    </p>
+                                @endif
+
+                            </div>
+
+
                         </div>
-
-
                     </div>
-                </div>
                 </section>
             </div>
 

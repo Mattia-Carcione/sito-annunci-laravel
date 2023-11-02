@@ -20,7 +20,8 @@
     
         <nav class="navbar bg-body-tertiary fixed-top" data-bs-theme="dark"  >
             <div class="container-fluid">
-              <span class="navbar-brand" ><a href="{{route('homepage')}}" class="navbar-brand">FindEasy</a>REVISOR</span>
+              <a href="{{route('homepage')}}" class="navbar-brand titolo">FindEasy</a>
+              <span class="navbar-brand">Area Revisor</span>
               <button class="navbar-toggler position-relative m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     {{ App\Models\Announcement::toBeRevisionedCount() }}

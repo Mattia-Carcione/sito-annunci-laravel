@@ -16,16 +16,18 @@
 
 
                 @forelse ($category->announcements->where('is_accepted', true) as $announcement)
-                    <div class="product-card col-12 col-md-4 m-2">
+                    <div class="product-card col-12 col-md-4 m-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         @if ($announcement->created_at->diffInHours(now()) <= 24)
                             <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                         @endif
+                        <a href="{{ route('announcements.show', $announcement) }}">
                         <img class="img-fluid"
                         src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : "https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg"}}"
                             alt="">
+                        </a>
                         <div class="product-details">
                             <span class="product-catagory">{{ $announcement->category->name }}</span>
-                            <h4><a class="stretched-link" style="color: #5478F0"
+                            <h4><a style="color: #5478F0"
                                     href="{{ route('announcements.show', $announcement) }}">{{ $announcement->title }}</a>
                             </h4>
                             <p class="description-overflow descrizione" id="descrizione">
