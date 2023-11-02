@@ -63,8 +63,12 @@
                             href="{{ route('announcements.create') }}">{{ __('ui.createAnnouncement') }}</a>
                     </li>
 
-                    @if (Auth::user()->is_revisor)
-                        <li class="nav-item d-flex align-items-center px-1">
+                    
+                </ul>
+                <div class="d-flex justify-content-end align-items-center">
+                    <ul class="navbar-nav me-auto" style="padding-right: 2.5rem">
+                        @if (Auth::user()->is_revisor)
+                        <li class="nav-item d-flex align-items-center px-1 mx-2">
                             <a class="nav-link position-relative nav-a" aria-current="page"
                                 href="{{ route('revisor.index') }}" id="navbar"
                                 role="button">{{ __('ui.revisorZone') }}
@@ -76,9 +80,6 @@
                             </a>
                         </li>
                     @endif
-                </ul>
-                <div class="d-flex justify-content-end align-items-center">
-                    <ul class="navbar-nav me-auto" style="padding-right: 2.5rem">
                         <li class="nav-item d-flex align-items-center dropdown">
                             <a class="nav-link dropdown-toggle nav-a text-light" href="#" id="#"
                                 role="button" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>

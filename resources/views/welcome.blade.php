@@ -13,7 +13,7 @@
                         <li class="me-3 me-lg-0">
                             <form class="d-flex" role="search" action="{{ route('announcements.search') }}"
                                 method="GET">
-                                <input class="form-control me-2" style="width: 400px; border-radius:20px;"
+                                <input class="form-control me-2 text-light first-search" style="width: 400px; border-radius:20px; background-color:black;"
                                     name="searched" type="search" placeholder="Search" aria-label="Search">
                                 <button class="button btn btn-hover"
                                     type="submit">{{ __('ui.search') }}</button>
