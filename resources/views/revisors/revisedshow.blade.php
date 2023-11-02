@@ -11,7 +11,7 @@
     <h1 class="pt-4 text-center">Modifica Scelta</h1>
     <hr>
     <div class="container mt-1 pt-1 min-vh-100">
-        <div class="row bg-danger">
+        <div class="row">
             <section class="product col-12">
                 <div>
                     <div class="controls">
