@@ -84,7 +84,7 @@
                             <a class="nav-link dropdown-toggle nav-a text-light" href="#" id="#"
                                 role="button" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item nav-a" href="#">{{ __('ui.profile') }}</a></li>
+                                <li><a class="dropdown-item nav-a" href="{{route('users.profile')}}">{{ __('ui.profile') }}</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
