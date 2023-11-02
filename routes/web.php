@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\RouteController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,8 @@ Route::get('/', [RouteController::class, 'homepage'])->name('homepage');
 Route::get('/dashboard', function () {
     return view('dashboards.dashboard');
 });
+
+Route::get('/user',[DashboardController::class, 'profile'])->name('users.profile')->middleware('auth');
 
 //Rotta lingue
 Route::post('/language/{lang}', [RouteController::class, 'setLanguage'])->name('set_language_locale');
