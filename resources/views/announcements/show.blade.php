@@ -7,7 +7,7 @@
 
     <div class="container mt-5 pt-5 min-vh-100">
         <div class="row">
-            <div class="col-lg-8 pe-lg-6">
+            <div class="col-lg-6 pe-lg-6">
                 <div class="row">
                     <div class="col-12">
 
@@ -15,7 +15,7 @@
                             {{ $announcement->title }}</h1>
                         <div id="carouselExampleFade" class="carousel slide carousel-fade">
                             @if ($announcement->images)
-                                <div class="carousel-inner ">
+                                <div class="carousel-inner">
                                     @foreach ($announcement->images as $image)
                                         <div class="carousel-item  @if ($loop->first) active @endif">
                                             <img src="{{ $image->getUrl(600, 400) }}" class="d-block" alt="...">
@@ -32,13 +32,12 @@
                                 </div>
                             @endif
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"
-                                    style="margin-right: 75px"></span>
+                                data-bs-slide="prev" style="margin-left: -3%">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                                data-bs-slide="next" style="margin-right: 100px">
+                                data-bs-slide="next" style="margin-right: 2.5%">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>

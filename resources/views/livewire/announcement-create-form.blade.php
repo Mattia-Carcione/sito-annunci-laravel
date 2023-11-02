@@ -74,7 +74,7 @@
             <!-- Description textarea -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="description">{{__('ui.description')}}</label>
-                <textarea type="text" class="form-control @error('description') is-invalid @enderror" wire:model="description"
+                <textarea type="text" class="form-control @error('description') is-invalid @enderror" wire:model.debounce.1500ms="description"
                     rows="4" placeholder="Inserisci la descrizione">
                 </textarea>
                 @error('description')
