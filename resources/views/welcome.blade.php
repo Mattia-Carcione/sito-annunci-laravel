@@ -2,18 +2,18 @@
     <main>
 
         <!-- Masthead-->
-        <header id="intro" class="mask p-0 z-0" style="background-color: rgba(0, 0, 0, 1);">
+        <header id="intro" class="mask p-0 z-0" >
 
 
             <div id="header-home"
-                class="bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center"
-                style="height: 100vh; background-repeat:no-repeat; background-size:cover">
-                <div class="pt-5 d-flex justify-content-center d-block">
-                    <ul class="d-flex flex-row pt-5" style="list-style-type:none">
-                        <li class="me-3 me-lg-0">
+                class="bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center justify-content-around"
+                style="height: 100vh; background-repeat:no-repeat; background-size:cover; margin-top:75px">
+                <div class="pt-5 d-flex justify-content-center " style="width: 40%;  ">
+                    <ul class="d-flex flex-row pt-5" style="list-style-type:none; width: 100%">
+                        <li class="me-3 me-lg-0" style="width: 100%">
                             <form class="d-flex" role="search" action="{{ route('announcements.search') }}"
                                 method="GET">
-                                <input class="form-control me-2 text-light first-search" style="width: 400px; border-radius:20px; background-color:black;"
+                                <input class="form-control me-2 text-light first-search" style="width: 100%; border-radius:20px; background-color:#2D3142;"
                                     name="searched" type="search" placeholder="Search" aria-label="Search">
                                 <button class="button btn btn-hover"
                                     type="submit">{{ __('ui.search') }}</button>
@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                 {{-- <img src="https://www.logicinbound.com/wp-content/uploads/2018/01/shutterstock_779835055-1080x778.jpg" class="object-fit-cover position-absolute opacity-50" style="width: 100%; height: 100%" alt=""> --}}
-                <div class="w-50 w-75 px-5 text-center mx-auto" style="filter:none; top:-25%;">
+                <div class="w-50 w-75 px-5 text-center mx-auto " style="filter:none; margin-bottom:10%">
                     @if (session()->has('access.denied'))
                         <div class="flex flex-row justify-content-center alert alert-danger">
                             {{ session('access.denied') }}
@@ -35,7 +35,7 @@
                         </div>
                     @endif
 
-                    <h1 class="titolo font fw-bolder" style="text-shadow: 1px 1px 4px white; margin-top:170px">
+                    <h1 class="titolo font fw-bolder" style="text-shadow: 1px 1px 4px white; margin-top:">
                         FindEasy.com</h1>
                     <p class="lead fw-bolder" style="text-shadow: 1px 1px 4px white">{{ __('ui.subtitle') }}</p>
                 </div>
