@@ -9,7 +9,7 @@ return [
     'language' => 'Lingua',
     'search' => 'Cerca',
     'location' => 'Localita\'',
-    'aroundTheWeb' => 'Cercaci tra i social',
+    'aroundTheWeb' => 'Trovaci anche su:',
     'revisor' => 'Diventa revisore',
     'workWithUs' => 'Vuoi lavorare con noi? Registrati e ',
     'here'=>'Clicca qui',

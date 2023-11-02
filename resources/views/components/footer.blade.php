@@ -7,7 +7,7 @@
                 <p class="lead mb-0">
                     Antonello, Andrea, Marco, Mattia
                     <br />
-                    Matera(MT), Ragusa(RG), Pisa, Giussago(MI)
+                    Matera(MT), Ragusa(RG), Pisa(PI), Giussago(MI)
                 </p>
             </div>
             <!-- Footer Social Icons-->
