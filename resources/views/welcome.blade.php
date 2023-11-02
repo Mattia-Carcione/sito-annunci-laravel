@@ -46,7 +46,7 @@
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary p-0 mt-5"
+                <h2 class="page-section-heading text-center text-uppercase text-secondary p-0 mt-5 fw-bolder"
                     style="color: #2c3e50 !important ">{{ __('ui.announcements') }}</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">

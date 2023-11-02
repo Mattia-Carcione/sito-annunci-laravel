@@ -20,7 +20,7 @@ return [
     'title' => 'Titolo',
     'price' => 'Prezzo',
     'description' => 'Descrizione',
-    'details' => 'Dettagli',
+    'detail' => 'Dettaglio prodotto',
     'date' => 'Pubblicato il: ',
     'author' => 'Autore:',
     'noAnnouncement' => 'Non ci sono annunci',

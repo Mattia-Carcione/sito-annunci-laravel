@@ -5,7 +5,16 @@
         </div>
     @endif
 
+
+ 
+
     <div class="container mt-5 pt-5 min-vh-100">
+        <h1 class="text-center mt-4 fw-bolder">{{__('ui.detail')}}</h1>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
         <div class="row">
             <div class="col-lg-6 pe-lg-6">
                 <div class="row">

@@ -1,5 +1,5 @@
     <main class="d-flex flex-column justify-content-center align-items-center mt-5 pt-5">
-        <h1 class="py-2">{{__('ui.createAnnouncement')}}</h1>
+        <h1 class="py-2 fw-bolder">{{__('ui.createAnnouncement')}}</h1>
         <div class="divider-custom m-0">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>

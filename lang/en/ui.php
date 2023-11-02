@@ -20,7 +20,7 @@ return [
     'title' => 'Title',
     'price' => 'Price',
     'description' => 'Description',
-    'details' => 'Details',
+    'detail' => 'Product detail',
     'date' => 'Published on: ',
     'author' => 'Author:',
     'noAnnouncement' => 'There are not announcements',
