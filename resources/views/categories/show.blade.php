@@ -15,7 +15,7 @@
             <div class="row justify-content-center pt-5">
 
 
-                @forelse ($category->announcements->where('is_accepted', true) as $announcement)
+                @forelse ($category->announcements()->orderBy("created_at","desc")->where('is_accepted', true)->paginate(4) as $announcement)
                     <div class="product-card col-12 col-md-4 m-2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         @if ($announcement->created_at->diffInHours(now()) <= 24)
                             <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
@@ -55,6 +55,7 @@
                     </div>
                 @endforelse
             </div>
+            {{ $category->announcements()->orderBy("created_at","desc")->where('is_accepted', true)->paginate(4)->links() }}
         </div>
     </section>
 </x-layout>
