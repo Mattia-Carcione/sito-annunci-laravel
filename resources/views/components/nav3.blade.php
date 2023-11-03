@@ -1,6 +1,6 @@
 <nav class="navbar navbar-3 navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="titolo navbar-brand nav-name" href="{{ route('homepage') }}">FindEasy</a>
+        <a class="titolo navbar-brand nav-name testo-nav" href="{{ route('homepage') }}">FindEasy</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,19 +8,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link nav-a" aria-current="page" href="{{ route('homepage') }}">Home</a>
+                    <a class="nav-link nav-a testo-nav" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-a" href="{{ route('announcements.index') }}">{{ __('ui.announcements') }}</a>
+                    <a class="nav-link nav-a testo-nav" href="{{ route('announcements.index') }}">{{ __('ui.announcements') }}</a>
                 </li>
                 <li class="nav-item dropdown px-1">
-                    <a class="nav-link nav-a dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link nav-a testo-nav dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{ __('ui.categories') }}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-                            <li class="px-1"><a class="dropdown-item"
+                            <li class="px-1"><a class="dropdown-item nav-a"
                                     href="{{ route('categories.show', compact('category')) }}">{{ $category->name }}</a>
                             </li>
                         @endforeach
@@ -28,7 +28,7 @@
                 </li>
                 <li class="nav-item">
                     <div class="dropdown">
-                        <a class=" dropdown-toggle nav-link nav-a text-light" href="#" role="button"
+                        <a class=" dropdown-toggle nav-link nav-a testo-nav" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{ __('ui.language') }}
                         </a>
@@ -53,7 +53,7 @@
                 @auth
 
                     <li class="nav-item px-1">
-                        <a class="nav-link nav-a"
+                        <a class="nav-link nav-a testo-nav"
                             href="{{ route('announcements.create') }}">{{ __('ui.createAnnouncement') }}</a>
                     </li>
 
@@ -63,7 +63,7 @@
                     <ul class="navbar-nav me-auto" style="padding-right: 2.5rem">
                         @if (Auth::user()->is_revisor)
                             <li class="nav-item d-flex align-items-center px-1 mx-2">
-                                <a class="nav-link position-relative nav-a" aria-current="page"
+                                <a class="nav-link position-relative nav-a testo-nav" aria-current="page"
                                     href="{{ route('revisor.index') }}" id="navbar"
                                     role="button">{{ __('ui.revisorZone') }}
                                     <span class="position-absolut top-0 start-100 translate-middle badge rounded-pill"
@@ -75,7 +75,7 @@
                             </li>
                         @endif
                         <li class="nav-item d-flex align-items-center dropdown">
-                            <a class="nav-link dropdown-toggle nav-a text-light" href="#" id="#"
+                            <a class="nav-link dropdown-toggle nav-a  testo-nav" href="#" id="#"
                                 role="button" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item nav-a"
