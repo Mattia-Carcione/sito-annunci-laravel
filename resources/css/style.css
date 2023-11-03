@@ -1457,3 +1457,8 @@ Base structure*/
   .first-search::-webkit-input-placeholder { 
     color: #fff;
 }
+
+  .navbar-3 {
+    background-color: #2D3142 !important;
+  }
+
