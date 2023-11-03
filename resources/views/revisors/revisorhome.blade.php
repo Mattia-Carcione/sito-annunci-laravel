@@ -5,7 +5,7 @@
             {{ session('success') }}
         </div>
     @elseif (session()->has('fail'))
-        <div class="flex flex-row justify-content-center alert alert-danger">
+        <div class="flex flex-row justify-content-center alert alert-success">
             {{ session('fail') }}
         </div>
     @endif

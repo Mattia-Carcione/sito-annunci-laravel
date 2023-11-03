@@ -1485,7 +1485,7 @@ Base structure*/
   }
 
   .description-overflow-auto {
-    white-space: nowrap;
-    width: 100px; 
-    overflow: auto; 
+    white-space: wrap;
+    overflow: visible; 
+    display: inline;
   }

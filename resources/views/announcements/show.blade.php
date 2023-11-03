@@ -8,7 +8,7 @@
 
  
 
-    <div class="container mt-5 pt-5 min-vh-100">
+    <div class="container mt-5 pt-5 mb-5">
         <h1 class="text-center mt-4 fw-bolder">{{__('ui.detail')}}</h1>
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
