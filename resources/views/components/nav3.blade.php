@@ -120,3 +120,23 @@
         </div>
     </div>
 </nav>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <ul class="d-flex flex-row pt-5 modal-content " style="list-style-type:none; width: 100%; background-color: transparent; border:none">
+            <li class="me-3 me-lg-0" style="width: 100%">
+                <form class="d-flex" role="search" action="{{ route('announcements.search') }}"
+                method="GET">
+                <input class="form-control me-2 text-light first-search" id="exampleModalLabel" style="width: 100%; border-radius:20px; background-color:#2D3142;"
+                name="searched" type="search" placeholder="Search" aria-label="Search">
+                <button class="button btn btn-hover"
+                type="submit">{{ __('ui.search') }}</button>
+                <button type="button" class="btn-close my-auto " data-bs-dismiss="modal" aria-label="Close" style="margin-left:5px"></button>
+                </form>
+            </li>
+
+        </ul>
+    </div>
+
+
+</div>
