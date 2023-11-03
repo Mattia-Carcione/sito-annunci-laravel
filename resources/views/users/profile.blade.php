@@ -1,5 +1,5 @@
 <x-layout>
-    <section style="background-color: #eee;">
+    <section style="background-color: whitesmoke;">
             <div class="row d-flex justify-content-center mt-5">
                 <div class="col-lg-4">
                     <div class="card mb-4">
@@ -18,6 +18,11 @@
             </div>
     </section>
     <h1 class="pt-5 text-center fw-bolder">Ecco gli annunci che hai pubblicato</h1>
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
     <div class="container">
 
         <div class="row justify-content-center mb-3 p-4">
