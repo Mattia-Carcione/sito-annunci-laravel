@@ -52,7 +52,7 @@
                             <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                             @endif
                             <a href="{{ route('announcements.show', $announcement) }}">
-                                <img src="{{ !$announcement->images()->get()->isEmpty()? $announcement->images()->first()->getUrl(300, 300): 'https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg' }}"
+                                <img id="img-card" src="{{ !$announcement->images()->get()->isEmpty()? $announcement->images()->first()->getUrl(300, 300): 'https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg' }}"
                                 alt="" class="img-fluid"></a>
                                 <div class="product-details">
                                     <span class="product-catagory">{{ $announcement->category->name }}</span>

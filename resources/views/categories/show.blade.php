@@ -21,7 +21,7 @@
                             <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                         @endif
                         <a href="{{ route('announcements.show', $announcement) }}">
-                        <img class="img-fluid"
+                        <img id="img-card" class="img-fluid"
                         src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(300,300) : "https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg"}}"
                             alt="">
                         </a>

@@ -1463,6 +1463,23 @@ Base structure*/
   }
 
   .testo-nav {
-    color: white ;
+    color: white;
   }
 
+  @media (max-width: 450px) {
+    #img-card {
+      width: 100% !important;
+    }
+  }
+  
+  @media (min-width: 451px) and (max-width: 750px) {
+    #img-card {
+      width: 100%  !important;
+    }
+  }
+  
+  @media (min-width: 751px) and (max-width: 990px) {
+    #img-card {
+      width: 100%  !important;
+    }
+  }

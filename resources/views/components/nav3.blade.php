@@ -1,20 +1,20 @@
-<nav class="navbar navbar-3 navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-3 navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
         <a class="titolo navbar-brand nav-name testo-nav" href="{{ route('homepage') }}">FindEasy</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler testo-nav bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item px-1">
                     <a class="nav-link nav-a testo-nav" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-1">
                     <a class="nav-link nav-a testo-nav" href="{{ route('announcements.index') }}">{{ __('ui.announcements') }}</a>
                 </li>
                 <li class="nav-item dropdown px-1">
-                    <a class="nav-link nav-a testo-nav dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link nav-a testo-nav text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{ __('ui.categories') }}
                     </a>
@@ -26,9 +26,9 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-1">
                     <div class="dropdown">
-                        <a class=" dropdown-toggle nav-link nav-a testo-nav" href="#" role="button"
+                        <a class=" dropdown-toggle nav-link nav-a testo-nav text-light" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{ __('ui.language') }}
                         </a>
@@ -62,7 +62,7 @@
                 <div class="d-flex justify-content-end align-items-center">
                     <ul class="navbar-nav me-auto" style="padding-right: 2.5rem">
                         @if (Auth::user()->is_revisor)
-                            <li class="nav-item d-flex align-items-center px-1 mx-2">
+                            <li class="nav-item d-flex align-items-center px-1">
                                 <a class="nav-link position-relative nav-a testo-nav" aria-current="page"
                                     href="{{ route('revisor.index') }}" id="navbar"
                                     role="button">{{ __('ui.revisorZone') }}
@@ -74,8 +74,9 @@
                                 </a>
                             </li>
                         @endif
-                        <li class="nav-item d-flex align-items-center dropdown">
-                            <a class="nav-link dropdown-toggle nav-a  testo-nav" href="#" id="#"
+                        <li class="nav-item d-flex align-items-center px-1">
+                            <div class="dropdown">
+                            <a class="nav-link dropdown-toggle nav-a testo-nav text-light" href="#" id="#"
                                 role="button" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item nav-a"
@@ -90,6 +91,7 @@
                                     @csrf
                                 </form>
                             </ul>
+                        </div>
                         </li>
                         <li class="nav-item d-flex px-1">
                             <button type="button" class="mx-3" style="background-color: transparent; border:none" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -110,7 +112,7 @@
                             <a class="nav-link nav-a text-light" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item d-flex px-1">
-                            <button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                               </button>
                         </li>
