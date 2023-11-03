@@ -26,7 +26,9 @@ for (let i = 0; i < myButtons.length; i++) {
             this.innerHTML = "Mostra";
         }
     });
-}
+};
+
+
 
 
 
@@ -117,3 +119,5 @@ $(document).ready(function () {
 
 
 });
+
+
