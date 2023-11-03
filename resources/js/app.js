@@ -20,8 +20,10 @@ for (let i = 0; i < myButtons.length; i++) {
         let myDiv = this.parentElement.querySelector(".descrizione");
         if (myDiv.classList.contains("description-overflow")) {
             myDiv.classList.remove("description-overflow");
+            myDiv.classList.add("description-overflow-auto");
             this.innerHTML = "Nascondi";
         } else {
+            myDiv.classList.remove("description-overflow-auto");
             myDiv.classList.add("description-overflow");
             this.innerHTML = "Mostra";
         }

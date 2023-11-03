@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="sticky-top py-6 py-lg-8 mt-5 pt-5">
+                <div class="sticky-top mt-4 pt-5">
                     @if ($announcement->created_at->diffInHours(now()) <= 24)
                         <div class="badge rounded-pill mb-2" style="background-color: #5478F0;">New</div>
                     @endif

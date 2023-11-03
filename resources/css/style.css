@@ -1483,3 +1483,9 @@ Base structure*/
       width: 100%  !important;
     }
   }
+
+  .description-overflow-auto {
+    white-space: nowrap;
+    width: 100px; 
+    overflow: auto; 
+  }
