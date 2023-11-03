@@ -18,7 +18,7 @@
 <body class="body-color-ultimate">
    
     <!-- Navigation-->
-    <x-nav2 />
+    <x-nav3 />
     
     {{ $slot }}
     
