@@ -1,6 +1,12 @@
 <x-layout>
     <section style="background-color: whitesmoke;">
-            <div class="row d-flex justify-content-center" style="margin-top:10%">
+            <div class="row d-flex justify-content-center" style="margin-top:3%">
+                <h1 class="pt-5 text-center fw-bolder">Profilo</h1>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
                 <div class="col-lg-4">
                     <div class="card mb-4">
                         <div class="card-body text-center">
