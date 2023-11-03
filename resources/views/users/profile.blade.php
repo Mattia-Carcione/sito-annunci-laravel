@@ -1,6 +1,6 @@
 <x-layout>
     <section style="background-color: whitesmoke;">
-            <div class="row d-flex justify-content-center mt-5">
+            <div class="row d-flex justify-content-center" style="margin-top:10%">
                 <div class="col-lg-4">
                     <div class="card mb-4">
                         <div class="card-body text-center">
