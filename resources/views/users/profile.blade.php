@@ -1,11 +1,27 @@
 <x-layout>
-    <h1 class="mt-5">Nome profilo: {{ Auth::user()->name }}</h1>
-    <h1 class="mt-5">Email: {{ Auth::user()->email }}</h1>
-    <span>Gli annunci che hai pubblicato sono:</span>
+    <section style="background-color: #eee;">
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                                alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                            <h5 class="my-3">{{ Auth::user()->name }}</h5>
+                            <p class="text-muted mb-1">Email: {{ Auth::user()->email }}</p>
+                            <p class="text-muted mb-4">Data registrazione: {{ Auth::user()->created_at->format('Y-m-d') }}</p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button type="button" class="btn btn-primary">Crea un annuncio!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <h1 class="pt-5 text-center fw-bolder">Ecco gli annunci che hai pubblicato</h1>
     <div class="container">
 
         <div class="row justify-content-center mb-3 p-4">
-            @foreach (Auth::user()->announcements as $announcement)
+            @foreach ($announcements as $announcement)
                 <div class="product-card col-12 col-md-4 m-2" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000">
                     @if ($announcement->created_at->diffInHours(now()) <= 24)
@@ -37,6 +53,7 @@
                 </div>
             @endforeach
         </div>
+        {{ $announcements->links() }}
 
     </div>
 
