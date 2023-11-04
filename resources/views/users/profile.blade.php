@@ -53,6 +53,21 @@
                         <p class="card-footer my-2">{{ __('ui.date') }}
                             {{ $announcement->created_at->format('d/m/Y') }} {{ __('ui.author') }}
                             {{ $announcement->user->name ?? '' }}</p>
+                        <h3 class="fw-bold"> @if ($announcement->is_accepted == true)
+
+                            ACCETTATO
+                            
+                        
+                            @elseif ($announcement->is_accepted == null)
+
+                            IN REVISIONE
+
+                            @elseif ($announcement->is_accepted == false)
+
+                            RIFIUTATO
+                            
+                            @endif
+                        </h3>
                         <div class="product-bottom-details">
                             <div class="product-price">€{{ $announcement->price }}</div>
                             <div class="product-links">

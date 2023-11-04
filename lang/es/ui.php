@@ -43,4 +43,5 @@ return [
     'date' => 'Publicado el: ',
     'showMore' => 'Mostrar',
     'Hidden' => 'Ocultar',
+    'editAnnouncement'=> 'Editar anuncio'
 ];

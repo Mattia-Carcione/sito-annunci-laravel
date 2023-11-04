@@ -102,8 +102,9 @@
                 </div>
             @endauth
             @guest
-                <div class="align-items-center justify-content-end" style="flex: 1; padding-right: 1rem ">
-                    <ul class="navbar-nav me-auto justify-content-end d-flex">
+        </div>
+                <div class="d-flex align-items-center justify-content-end" style="flex: 1; padding-right: 1rem ">
+                    <ul class="navbar-nav me-auto justify-content-end d-flex" style="margin-right:0 !important">
                         <li class="nav-item d-flex px-1">
                             <a class="nav-link nav-a text-light"
                                 href="{{ route('register') }}">{{ __('ui.register') }}</a>
@@ -112,9 +113,9 @@
                             <a class="nav-link nav-a text-light" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item d-flex px-1">
-                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                              </button>
+                            <button type="button" class="mx-3" style="background-color: transparent; border:none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
+                            </button>
                         </li>
                     </ul>
                 </div>

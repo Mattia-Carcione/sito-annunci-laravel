@@ -52,10 +52,10 @@ class AnnouncementController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    //public function edit(Announcement $announcement)
-    //{
-        //
-    //}
+    public function edit(Announcement $announcement)
+    {
+        return view('announcements.edit', compact('announcement'));
+    }
 
     /**
      * Update the specified resource in storage.
