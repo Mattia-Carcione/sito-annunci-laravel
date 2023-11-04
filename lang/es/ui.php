@@ -8,7 +8,7 @@ return [
     'register' => 'Registrate',
     'language' => 'Idioma',
     'search' => 'Buscar',
-    'location' => 'Ubicacion',
+    'location' => 'Creatores',
     'aroundTheWeb' => 'En el web',
     'revisor' => 'Conviértete en revisor',
     'workWithUs' => 'Quieres trabajar con nosotros? Registrate y ',

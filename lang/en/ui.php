@@ -8,7 +8,7 @@ return [
     'register' => 'Register',
     'language' => 'Language',
     'search' => 'Search',
-    'location' => 'Location',
+    'location' => 'Creators',
     'aroundTheWeb' => 'Around the web',
     'revisor' => 'Become a reviewer',
     'workWithUs' => 'Do you want to work with us? Register and ',

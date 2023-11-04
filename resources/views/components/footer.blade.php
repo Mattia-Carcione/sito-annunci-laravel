@@ -4,11 +4,13 @@
             <!-- Footer Location-->
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <h4 class="text-uppercase mb-4">{{__('ui.location')}}</h4>
-                <p class="lead mb-0">
-                    Antonello, Andrea, Marco, Mattia
-                    <br />
-                    Matera(MT), Ragusa(RG), Pisa(PI), Giussago(MI)
-                </p>
+                <ul class="text-center p-0" style="list-style:none">
+                    <li><h5>Antonello Rinaldelli</h5></li>
+                    <li><h5>Andrea Criscione</h5></li>
+                    <li><h5>Marco Cima</h5></li>
+                    <li><h5>Mattia Carcione</h5></li>
+
+                </ul>
             </div>
             <!-- Footer Social Icons-->
             <div class="col-lg-4 mb-5 mb-lg-0">
