@@ -42,6 +42,7 @@ class AnnouncementCreateForm extends Component
 
     public function updatedTemporaryImages()
     {
+        
         if ($this->validate([
             'temporary_images.*' => 'image| max: 1024'
         ])) {

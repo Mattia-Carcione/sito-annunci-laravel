@@ -15,8 +15,12 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
+
 class AnnouncementEditForm extends Component
 {
+
+    use WithFileUploads;
+
     public Announcement $announcement;
     public $title, $description, $price, $category, $temporary_images = [], $images = [], $iteration=0;
 
@@ -41,8 +45,27 @@ class AnnouncementEditForm extends Component
 
     ];
 
+    public function mount()
+    {
+        $this->title = $this->announcement->title;
+        $this->description = $this->announcement->description;
+        $this->price = $this->announcement->price;
+        $this->category = $this->announcement->category_id;
+        if (is_array($this->announcement->images)) {
+            $this->temporary_images = $this->announcement->images;
+            $this->images = $this->announcement->images;
+        } else {
+            $this->temporary_images[] = $this->announcement->images;
+            $this->images[] = $this->announcement->images;
+        }
+        
+        
+
+    }
+
     public function updatedTemporaryImages()
     {
+        
         if ($this->validate([
             'temporary_images.*' => 'image| max: 1024'
         ])) {
@@ -52,10 +75,13 @@ class AnnouncementEditForm extends Component
             }
         }
     }
-
+ 
     public function removeImage($key)
     {
+        
         if (in_array($key, array_keys($this->images))) {
+            dd('test');
+            dd($key);
             unset($this->images[$key]);
         }
     }
@@ -65,17 +91,7 @@ class AnnouncementEditForm extends Component
         $this->validateOnly($propertyName);
     }
 
-    public function mount()
-    {
-        $this->title = $this->announcement->title;
-        $this->description = $this->announcement->description;
-        $this->price = $this->announcement->price;
-        $this->category = $this->announcement->category_id;
-        $this->temporary_images[] = $this->announcement->images;
-        $this->images[] = $this->announcement->images;
-        
-
-    }
+    
     
     public function update()
     {

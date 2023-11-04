@@ -53,18 +53,23 @@
                         <p class="card-footer my-2">{{ __('ui.date') }}
                             {{ $announcement->created_at->format('d/m/Y') }} {{ __('ui.author') }}
                             {{ $announcement->user->name ?? '' }}</p>
-                        <h3 class="fw-bold"> @if ($announcement->is_accepted == true)
+                        <h3 class="fw-bold"> 
+                            @if ($announcement->is_accepted === 1)
 
                             ACCETTATO
+
+                           
                             
                         
-                            @elseif ($announcement->is_accepted == null)
-
-                            IN REVISIONE
-
-                            @elseif ($announcement->is_accepted == false)
+                            @elseif ($announcement->is_accepted === 0)
 
                             RIFIUTATO
+
+
+                            @else 
+
+                            IN REVISIONE
+                            
                             
                             @endif
                         </h3>

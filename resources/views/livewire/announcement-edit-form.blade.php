@@ -57,13 +57,20 @@
                     <p>{{__('ui.imagesSelected')}}</p>
                     <div class="row border border-4 border-info rounded  py-4">
                         
-                        @foreach ( $images as $key=>$image )
+                        @foreach ( $images as $key => $image )
+
+                        @foreach ( $image as $key => $item )
+                        
+                        
                         <div class="col-6 my-1">
                             {{-- <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}})"></div> --}}
                             
-                            <img src="{{$image->getUrl(600, 400)}}" alt="" class="img-responsive p-3" style=" background-position: center; background-size: cover; width: 70%; height: 70%">
+                            
+                            <img src="{{$item->getUrl()}}" alt="" class="img-responsive p-3" style=" background-position: center; background-size: cover; width: 70%; height: 70%">
                             <button type="button" class="btn btn-danger shadow d-block text-center mt-2" wire:click="removeImage({{$key}})">Cancella</button>
                         </div>
+                        
+                        @endforeach
                             
                         @endforeach
                     </div>

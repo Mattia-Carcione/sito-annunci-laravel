@@ -9,7 +9,7 @@
             class="bg-image text-dark text-center cover-container d-flex p-3 flex-column p-0 m-0 mx-auto align-items-center justify-content-center"
             style="height: 100vh; background-repeat:no-repeat; background-size:cover; ">
                 <div>
-                    <div class="w-50 w-75 px-5 text-center mx-auto d-flex justify-content-center align-items-center wrap" style="flex-wrap:wrap">
+                    <div class="w-50 w-75 px-5 text-center mx-auto d-flex flex-column justify-content-center align-items-center wrap" style="flex-wrap:wrap">
                         @if (session()->has('access.denied'))
                         <div class="flex flex-row justify-content-center alert alert-danger">
                             {{ session('access.denied') }}
