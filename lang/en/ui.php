@@ -43,5 +43,13 @@ return [
     'date' => 'Published on: ',
     'showMore' => 'Show more',
     'Hidden' => 'Hide',
-    'editAnnouncement'=> 'Edit announcement'
+    'editAnnouncement'=> 'Edit announcement',
+    'registrationDate'=> 'Registration Date:',
+    'announcementsPublished'=> 'Announcements published',
+    'accepted'=> 'Accepted',
+    'refused'=> 'Refused',
+    'inReview'=> 'In Review',
+    'enterTheTitle'=> 'Enter the title',
+    'enterTheDescription'=> 'Enter the description',
+    'announcementPublished'=> 'Create announcement'
 ];

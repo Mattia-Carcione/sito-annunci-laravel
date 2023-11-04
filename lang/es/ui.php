@@ -25,7 +25,7 @@ return [
     'author' => 'Autor:',
     'noAnnouncement' => 'No hay anuncios',
     'createAnnouncement' => 'Publica un anuncio',
-    'category' => 'Categoria',
+    'category' => 'Categorìa',
     'images' => 'Imagenes',
     'imagesSelected' => 'Imagenes seleccionadas',
     'create' => 'Crear',
@@ -43,5 +43,13 @@ return [
     'date' => 'Publicado el: ',
     'showMore' => 'Mostrar',
     'Hidden' => 'Ocultar',
-    'editAnnouncement'=> 'Editar anuncio'
+    'editAnnouncement'=> 'Editar anuncio',
+    'registrationDate'=> 'Fecha de Registro:',
+    'announcementsPublished'=> 'Anuncios publicados',
+    'accepted'=> 'Aceptado',
+    'refused'=> 'Rechazado',
+    'inReview'=> 'En Revisión',
+    'enterTheTitle'=> 'Ingrese el título',
+    'enterTheDescription'=> 'Introduce la descripción',
+    'announcementPublished'=> 'Crear anuncio'
 ];

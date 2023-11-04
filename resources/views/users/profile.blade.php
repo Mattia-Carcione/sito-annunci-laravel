@@ -1,7 +1,7 @@
 <x-layout>
     <section style="background-color: whitesmoke;">
             <div class="row d-flex justify-content-center" style="margin-top:3%">
-                <h1 class="pt-5 text-center fw-bolder">Profilo</h1>
+                <h1 class="pt-5 text-center fw-bolder">{{__('ui.profile')}}</h1>
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -14,16 +14,16 @@
                                 alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
                             <h5 class="my-3">{{ Auth::user()->name }}</h5>
                             <p class="text-muted mb-1">Email: {{ Auth::user()->email }}</p>
-                            <p class="text-muted mb-4">Data registrazione: {{ Auth::user()->created_at->format('Y-m-d') }}</p>
+                            <p class="text-muted mb-4">{{__('ui.registrationDate')}} {{ Auth::user()->created_at->format('Y-m-d') }}</p>
                             <div class="d-flex justify-content-center mb-2">
-                                <button type="button" class="btn btn-primary">Crea un annuncio!</button>
+                                <button type="button" class="button btn btn-hover">{{__('ui.announcementPublished')}}</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
     </section>
-    <h1 class="pt-5 text-center fw-bolder">Ecco gli annunci che hai pubblicato</h1>
+    <h1 class="pt-5 text-center fw-bolder">{{__('ui.announcementsPublished')}}</h1>
     <div class="divider-custom">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -56,19 +56,19 @@
                         <h3 class="fw-bold"> 
                             @if ($announcement->is_accepted === 1)
 
-                            ACCETTATO
+                            {{ __('ui.accepted') }}
 
                            
                             
                         
                             @elseif ($announcement->is_accepted === 0)
 
-                            RIFIUTATO
+                            {{ __('ui.refused') }}
 
 
                             @else 
 
-                            IN REVISIONE
+                            {{ __('ui.inReview') }}
                             
                             
                             @endif

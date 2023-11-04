@@ -43,5 +43,13 @@ return [
     'date' => 'Pubblicato il: ',
     'showMore' => 'Mostra',
     'Hidden' => 'Nascondi',
-    'editAnnouncement'=> 'Modifica annuncio'
+    'editAnnouncement'=> 'Modifica annuncio',
+    'registrationDate'=> 'Data Registrazione:',
+    'announcementsPublished'=> 'Annunci pubblicati',
+    'accepted'=> 'Accettato',
+    'refused'=> 'Rifiutato',
+    'inReview'=> 'In Revisione',
+    'enterTheTitle'=> 'Inserisci il titolo',
+    'enterTheDescription'=> 'Inserisci la descrizione',
+    'announcementPublished'=> 'Crea annuncio'
 ];

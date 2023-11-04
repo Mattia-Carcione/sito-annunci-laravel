@@ -20,7 +20,7 @@
             <div class="form-outline mb-4">
                 <label class="form-label" for="title">{{__('ui.title')}}</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" wire:model="title"
-                    placeholder="Inserisci il titolo" />
+                    placeholder="{{__('ui.enterTheTitle')}}" />
                 @error('title')
                     <span class="error text-danger">{{ $message }}</span>
                 @enderror
@@ -30,7 +30,7 @@
             <div class="form-outline mb-4">
                 <label class="form-label" for="category">{{__('ui.category')}}</label>
                 <select type="text" class="form-control" wire:model.defer="category">
-                    <option value="">--Categoria</option>
+                    <option value="">--{{__('ui.category')}}</option>
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
@@ -75,7 +75,7 @@
             <div class="form-outline mb-4">
                 <label class="form-label" for="description">{{__('ui.description')}}</label>
                 <textarea type="text" class="form-control @error('description') is-invalid @enderror" wire:model.debounce.1500ms="description"
-                    rows="4" placeholder="Inserisci la descrizione">
+                    rows="4" placeholder="{{__('ui.enterTheDescription')}}">
                 </textarea>
                 @error('description')
                     <span class="error text-danger">{{ $message }}</span>
@@ -85,7 +85,7 @@
             {{-- Price input --}}
             <div class="form-outline mb-4">
                 <label class="form-label" for="price">{{__('ui.price')}}</label>
-                <input type="text" class="form-control @error('price') is-invalid @enderror" wire:model="price" />
+                <input type="text" class="form-control @error('price') is-invalid @enderror" wire:model="price" placeholder="€" />
                 @error('price')
                     <span class="error text-danger">{{ $message }}</span>
                 @enderror
